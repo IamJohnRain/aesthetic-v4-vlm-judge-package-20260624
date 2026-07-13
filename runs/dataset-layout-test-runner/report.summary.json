@@ -1,0 +1,14 @@
+{
+  "bucket_counts": {
+    "[50,60)": 1,
+    "[70,80)": 1
+  },
+  "csv": "D:\\code\\A2UI\\vlm\\aesthetic-v4-vlm-judge-package-20260624\\runs\\dataset-layout-test-runner\\scores.csv",
+  "out": "D:\\code\\A2UI\\vlm\\aesthetic-v4-vlm-judge-package-20260624\\runs\\dataset-layout-test-runner\\report.html",
+  "profile": "aesthetic-v4",
+  "records": 2,
+  "score_breakdown": "on",
+  "status_counts": {
+    "scored": 2
+  }
+}

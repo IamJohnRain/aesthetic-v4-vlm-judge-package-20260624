@@ -1,0 +1,528 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>aesthetic-v4 report</title>
+  <style>
+    :root { color-scheme: light; --bg: #f7f7f5; --panel: #fff; --text: #171717; --muted: #666b73; --line: #d9ddd6; --accent: #1f6f61; }
+    * { box-sizing: border-box; }
+    body { margin: 0; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; background: var(--bg); color: var(--text); }
+    body > header { padding: 24px; border-bottom: 1px solid var(--line); background: #fff; position: sticky; top: 0; z-index: 2; }
+    h1 { margin: 0 0 6px; font-size: 24px; }
+    .meta { color: var(--muted); font-size: 13px; display: flex; gap: 14px; flex-wrap: wrap; }
+    main { display: grid; grid-template-columns: minmax(210px, 260px) 1fr; gap: 18px; padding: 18px; }
+    aside { align-self: start; position: sticky; top: 98px; background: var(--panel); border: 1px solid var(--line); border-radius: 8px; padding: 14px; }
+    table { border-collapse: collapse; width: 100%; }
+    th, td { border-bottom: 1px solid var(--line); padding: 7px 0; font-size: 13px; text-align: left; }
+    td { text-align: right; color: var(--muted); }
+    .cards { display: grid; gap: 14px; }
+    .card { background: var(--panel); border: 1px solid var(--line); border-radius: 8px; overflow: hidden; }
+    .card > header { display: flex; justify-content: space-between; gap: 16px; padding: 14px; border-bottom: 1px solid var(--line); }
+    h2 { margin: 0; font-size: 17px; }
+    h2 + p { margin: 5px 0 0; font-size: 12px; color: var(--muted); overflow-wrap: anywhere; }
+    .score { text-align: right; min-width: 110px; }
+    .score b { font-size: 28px; line-height: 1; }
+    .score span { color: var(--muted); font-size: 12px; }
+    .score em { display: block; margin-top: 4px; color: var(--accent); font-style: normal; font-weight: 650; }
+    .rationale { padding: 14px; border-bottom: 1px solid var(--line); color: #2c3035; line-height: 1.55; font-size: 14px; }
+    .view { display: grid; grid-template-columns: minmax(280px, 42%) 1fr; gap: 14px; padding: 14px; border-top: 1px solid var(--line); }
+    .shot { background: #ebeee9; border: 1px solid var(--line); border-radius: 6px; overflow: hidden; min-height: 180px; display: grid; place-items: center; }
+    .shot img { width: 100%; height: auto; display: block; }
+    .view h3 { margin: 0 0 10px; font-size: 15px; }
+    .view h3 span { color: var(--muted); font-weight: 500; margin-left: 8px; }
+    .axis { margin-bottom: 10px; }
+    .occ { margin: 8px 0; font-size: 12px; color: var(--muted); }
+    .occ.warn { color: #8a4b13; font-weight: 650; }
+    .occ.ok { color: #4d655d; }
+    .occ-table { margin: 8px 0 10px; }
+    .occ-table th, .occ-table td { text-align: left; vertical-align: top; padding: 6px 8px 6px 0; }
+    .designer-review { margin-top: 10px; padding-top: 10px; border-top: 1px solid var(--line); font-size: 13px; }
+    .designer-review h4 { margin: 8px 0 4px; font-size: 13px; }
+    .designer-review ul { margin: 0 0 8px 18px; padding: 0; color: #2c3035; }
+    .view p { margin: 0; color: #2c3035; line-height: 1.55; font-size: 13px; }
+    .missing { color: var(--muted); font-size: 13px; }
+    @media (max-width: 860px) { main { grid-template-columns: 1fr; } aside { position: static; } .view { grid-template-columns: 1fr; } }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>aesthetic-v4 VLM Judge Report</h1>
+    <div class="meta">
+      <span>generated 2026-07-13 10:00:04</span>
+      <span>records 20</span>
+      <span>scored 20</span>
+      <span>partial/failed 0</span>
+    </div>
+  </header>
+  <main>
+    <aside>
+      <h2>分档统计</h2>
+      <table><tbody><tr><th>[0,10)</th><td>3</td></tr><tr><th>[10,20)</th><td>3</td></tr><tr><th>[20,30)</th><td>2</td></tr><tr><th>[30,40)</th><td>0</td></tr><tr><th>[40,50)</th><td>4</td></tr><tr><th>[50,60)</th><td>4</td></tr><tr><th>[60,70)</th><td>3</td></tr><tr><th>[70,80)</th><td>1</td></tr><tr><th>[80,100]</th><td>0</td></tr></tbody></table>
+    </aside>
+    <section class="cards">
+      
+<article class="card" data-bucket="[20,30)" data-status="scored">
+  <header>
+    <div>
+      <h2>card_dsl_98c6943138</h2>
+      <p>Case-01-low-power-001/card.dsl.png</p>
+    </div>
+    <div class="score"><b>25.00</b><span>/100</span><em>[20,30)</em></div>
+  </header>
+  <div class="rationale">image: 命中 [20,30) 档：属于单卡状态/工具卡类型（电池电量+地图后台定位），深紫渐变背景有意图，标题/副标题/进度条层次清晰，底部地图占用条有圆角胶囊细节。视觉处理较 [10,20) 默认模板更克制有主题感，但仍为单卡信息展示，无多模块产品深度、未见丰富状态设计或品牌系统，未达 [30,40) 完整多区产品页标准。</div>
+  
+<section class="view">
+  <div class="shot"><img src="file:///D:/A2UI/CartTaskSpec/datasets/case-600-newSkill-gpt5.5-long/Case-01-low-power-001/card.dsl.png" alt="image screenshot" loading="lazy"></div>
+  <div class="view-body">
+    <h3>image <span>25.00/100</span></h3>
+    <table class="axis"><tbody><tr><th>视觉冲击 / 原创性</th><td>2.2</td></tr><tr><th>构图层级</th><td>2.1</td></tr><tr><th>字体表现</th><td>1.6</td></tr><tr><th>色彩与材质</th><td>2.4</td></tr><tr><th>细节完成度</th><td>1.5</td></tr><tr><th>基础可用性</th><td>2.4</td></tr></tbody></table>
+    <div class="occ ok">occlusion_overlap_check: always_on · no finding</div>
+    <p>命中 [20,30) 档：属于单卡状态/工具卡类型（电池电量+地图后台定位），深紫渐变背景有意图，标题/副标题/进度条层次清晰，底部地图占用条有圆角胶囊细节。视觉处理较 [10,20) 默认模板更克制有主题感，但仍为单卡信息展示，无多模块产品深度、未见丰富状态设计或品牌系统，未达 [30,40) 完整多区产品页标准。</p>
+    
+  </div>
+</section>
+
+</article>
+
+<article class="card" data-bucket="[40,50)" data-status="scored">
+  <header>
+    <div>
+      <h2>card_dsl_083cb5b804</h2>
+      <p>Case-01-low-power-004/card.dsl.png</p>
+    </div>
+    <div class="score"><b>45.00</b><span>/100</span><em>[40,50)</em></div>
+  </header>
+  <div class="rationale">image: 命中[40,50)档：属于单卡片精致widget类型；可见证据为深红渐变背景、半透明信息卡、12%电量读数与三个药丸按钮、空白白色图标占位；玻璃拟态与警示配色协调，但仅一卡一屏，缺少更广组件体系与品牌纵深，未达[50,60)。</div>
+  
+<section class="view">
+  <div class="shot"><img src="file:///D:/A2UI/CartTaskSpec/datasets/case-600-newSkill-gpt5.5-long/Case-01-low-power-004/card.dsl.png" alt="image screenshot" loading="lazy"></div>
+  <div class="view-body">
+    <h3>image <span>45.00/100</span></h3>
+    <table class="axis"><tbody><tr><th>视觉冲击 / 原创性</th><td>3.9</td></tr><tr><th>构图层级</th><td>3.6</td></tr><tr><th>字体表现</th><td>3.3</td></tr><tr><th>色彩与材质</th><td>3.8</td></tr><tr><th>细节完成度</th><td>3.1</td></tr><tr><th>基础可用性</th><td>3.8</td></tr></tbody></table>
+    <div class="occ ok">occlusion_overlap_check: always_on · no finding</div>
+    <p>命中[40,50)档：属于单卡片精致widget类型；可见证据为深红渐变背景、半透明信息卡、12%电量读数与三个药丸按钮、空白白色图标占位；玻璃拟态与警示配色协调，但仅一卡一屏，缺少更广组件体系与品牌纵深，未达[50,60)。</p>
+    
+  </div>
+</section>
+
+</article>
+
+<article class="card" data-bucket="[40,50)" data-status="scored">
+  <header>
+    <div>
+      <h2>card_dsl_56d3b65cfc</h2>
+      <p>Case-01-low-power-007/card.dsl.png</p>
+    </div>
+    <div class="score"><b>45.00</b><span>/100</span><em>[40,50)</em></div>
+  </header>
+  <div class="rationale">image: 命中 [40,50) 档：属于单卡片精致工具型（低电+会议提醒）；可见证据为暖棕橙渐变背景、28%环形进度、15:00会议信息卡与三按钮（开启省电/查看日程/找充电宝），视觉场景连贯。未进 [50,60) 因组件深度有限，仅一张主卡片+三按钮，无图表或更丰富的状态层次；未进 [20,30) 因主题背景、环形进度、按钮态对比有刻意设计感。</div>
+  
+<section class="view">
+  <div class="shot"><img src="file:///D:/A2UI/CartTaskSpec/datasets/case-600-newSkill-gpt5.5-long/Case-01-low-power-007/card.dsl.png" alt="image screenshot" loading="lazy"></div>
+  <div class="view-body">
+    <h3>image <span>45.00/100</span></h3>
+    <table class="axis"><tbody><tr><th>视觉冲击 / 原创性</th><td>3.9</td></tr><tr><th>构图层级</th><td>3.6</td></tr><tr><th>字体表现</th><td>3.3</td></tr><tr><th>色彩与材质</th><td>3.8</td></tr><tr><th>细节完成度</th><td>3.1</td></tr><tr><th>基础可用性</th><td>3.8</td></tr></tbody></table>
+    <div class="occ ok">occlusion_overlap_check: always_on · no finding</div>
+    <p>命中 [40,50) 档：属于单卡片精致工具型（低电+会议提醒）；可见证据为暖棕橙渐变背景、28%环形进度、15:00会议信息卡与三按钮（开启省电/查看日程/找充电宝），视觉场景连贯。未进 [50,60) 因组件深度有限，仅一张主卡片+三按钮，无图表或更丰富的状态层次；未进 [20,30) 因主题背景、环形进度、按钮态对比有刻意设计感。</p>
+    
+  </div>
+</section>
+
+</article>
+
+<article class="card" data-bucket="[10,20)" data-status="scored">
+  <header>
+    <div>
+      <h2>card_dsl_5be228e070</h2>
+      <p>Case-01-low-power-003/card.dsl.png</p>
+    </div>
+    <div class="score"><b>15.00</b><span>/100</span><em>[10,20)</em></div>
+  </header>
+  <div class="rationale">image: 命中 [10,20) 档：属于低质量设备状态工具/通知组件；可见证据为深色背景、三张设备卡（手机18%/手表12%/平板46%）、蓝色进度条、绿色对勾、底部提示与蓝色&quot;开省电&quot;按钮；控件默认、卡片左下角为空白灰色占位方块（缺失图标），类型化程度低、视觉无品牌深度。未进 [20,30) 因控件仍为默认样式且存在占位缺陷，并非完整工作流的多卡结构。</div>
+  
+<section class="view">
+  <div class="shot"><img src="file:///D:/A2UI/CartTaskSpec/datasets/case-600-newSkill-gpt5.5-long/Case-01-low-power-003/card.dsl.png" alt="image screenshot" loading="lazy"></div>
+  <div class="view-body">
+    <h3>image <span>15.00/100</span></h3>
+    <table class="axis"><tbody><tr><th>视觉冲击 / 原创性</th><td>1.3</td></tr><tr><th>构图层级</th><td>1.3</td></tr><tr><th>字体表现</th><td>1.0</td></tr><tr><th>色彩与材质</th><td>1.5</td></tr><tr><th>细节完成度</th><td>0.6</td></tr><tr><th>基础可用性</th><td>1.5</td></tr></tbody></table>
+    <div class="occ warn">occlusion_overlap_check: always_on · affected axes 5</div><table class="occ-table"><tbody><tr><th>clipping_crop</th><td>moderate</td><td>三张设备卡左下角图标</td><td>每张卡内左下角为空白灰色方块，无图标或内容显示，疑似缺失/未加载</td></tr></tbody></table>
+    <p>命中 [10,20) 档：属于低质量设备状态工具/通知组件；可见证据为深色背景、三张设备卡（手机18%/手表12%/平板46%）、蓝色进度条、绿色对勾、底部提示与蓝色&quot;开省电&quot;按钮；控件默认、卡片左下角为空白灰色占位方块（缺失图标），类型化程度低、视觉无品牌深度。未进 [20,30) 因控件仍为默认样式且存在占位缺陷，并非完整工作流的多卡结构。</p>
+    
+  </div>
+</section>
+
+</article>
+
+<article class="card" data-bucket="[0,10)" data-status="scored">
+  <header>
+    <div>
+      <h2>card_dsl_2ba8d6aa74</h2>
+      <p>Case-01-low-power-008/card.dsl.png</p>
+    </div>
+    <div class="score"><b>5.00</b><span>/100</span><em>[0,10)</em></div>
+  </header>
+  <div class="rationale">image: 命中 [0,10) 档：属于单卡片省电玩具工具类型；可见证据是紫色渐变背景、白色默认字体、四行文本+绿色&#x27;开&#x27;开关按钮、无图标无插画无导航无品牌系统；未进 [10,20) 因为没有筛选/输入区、多卡片或多控件结构，纯粹是默认控件加留白，不构成低模板。</div>
+  
+<section class="view">
+  <div class="shot"><img src="file:///D:/A2UI/CartTaskSpec/datasets/case-600-newSkill-gpt5.5-long/Case-01-low-power-008/card.dsl.png" alt="image screenshot" loading="lazy"></div>
+  <div class="view-body">
+    <h3>image <span>5.00/100</span></h3>
+    <table class="axis"><tbody><tr><th>视觉冲击 / 原创性</th><td>0.5</td></tr><tr><th>构图层级</th><td>0.5</td></tr><tr><th>字体表现</th><td>0.0</td></tr><tr><th>色彩与材质</th><td>0.7</td></tr><tr><th>细节完成度</th><td>0.0</td></tr><tr><th>基础可用性</th><td>0.7</td></tr></tbody></table>
+    <div class="occ ok">occlusion_overlap_check: always_on · no finding</div>
+    <p>命中 [0,10) 档：属于单卡片省电玩具工具类型；可见证据是紫色渐变背景、白色默认字体、四行文本+绿色&#x27;开&#x27;开关按钮、无图标无插画无导航无品牌系统；未进 [10,20) 因为没有筛选/输入区、多卡片或多控件结构，纯粹是默认控件加留白，不构成低模板。</p>
+    
+  </div>
+</section>
+
+</article>
+
+<article class="card" data-bucket="[60,70)" data-status="scored">
+  <header>
+    <div>
+      <h2>card_dsl_37bc991dfc</h2>
+      <p>Case-01-low-power-005/card.dsl.png</p>
+    </div>
+    <div class="score"><b>65.00</b><span>/100</span><em>[60,70)</em></div>
+  </header>
+  <div class="rationale">image: score_only</div>
+  
+<section class="view">
+  <div class="shot"><img src="file:///D:/A2UI/CartTaskSpec/datasets/case-600-newSkill-gpt5.5-long/Case-01-low-power-005/card.dsl.png" alt="image screenshot" loading="lazy"></div>
+  <div class="view-body">
+    <h3>image <span>65.00/100</span></h3>
+    <table class="axis"><tbody><tr><th>视觉冲击 / 原创性</th><td>5.2</td></tr><tr><th>构图层级</th><td>5.2</td></tr><tr><th>字体表现</th><td>5.2</td></tr><tr><th>色彩与材质</th><td>5.2</td></tr><tr><th>细节完成度</th><td>5.2</td></tr><tr><th>基础可用性</th><td>5.2</td></tr></tbody></table>
+    <div class="occ ok">occlusion_overlap_check: always_on · no finding</div>
+    <p>score_only</p>
+    
+  </div>
+</section>
+
+</article>
+
+<article class="card" data-bucket="[60,70)" data-status="scored">
+  <header>
+    <div>
+      <h2>card_dsl_45502bdbb5</h2>
+      <p>Case-01-low-power-002/card.dsl.png</p>
+    </div>
+    <div class="score"><b>68.75</b><span>/100</span><em>[60,70)</em></div>
+  </header>
+  <div class="rationale">image: score_only</div>
+  
+<section class="view">
+  <div class="shot"><img src="file:///D:/A2UI/CartTaskSpec/datasets/case-600-newSkill-gpt5.5-long/Case-01-low-power-002/card.dsl.png" alt="image screenshot" loading="lazy"></div>
+  <div class="view-body">
+    <h3>image <span>68.75/100</span></h3>
+    <table class="axis"><tbody><tr><th>视觉冲击 / 原创性</th><td>5.5</td></tr><tr><th>构图层级</th><td>5.5</td></tr><tr><th>字体表现</th><td>5.5</td></tr><tr><th>色彩与材质</th><td>5.5</td></tr><tr><th>细节完成度</th><td>5.5</td></tr><tr><th>基础可用性</th><td>5.5</td></tr></tbody></table>
+    <div class="occ ok">occlusion_overlap_check: always_on · no finding</div>
+    <p>score_only</p>
+    
+  </div>
+</section>
+
+</article>
+
+<article class="card" data-bucket="[50,60)" data-status="scored">
+  <header>
+    <div>
+      <h2>card_dsl_7ec5702f6c</h2>
+      <p>Case-01-low-power-006/card.dsl.png</p>
+    </div>
+    <div class="score"><b>52.50</b><span>/100</span><em>[50,60)</em></div>
+  </header>
+  <div class="rationale">image: score_only</div>
+  
+<section class="view">
+  <div class="shot"><img src="file:///D:/A2UI/CartTaskSpec/datasets/case-600-newSkill-gpt5.5-long/Case-01-low-power-006/card.dsl.png" alt="image screenshot" loading="lazy"></div>
+  <div class="view-body">
+    <h3>image <span>52.50/100</span></h3>
+    <table class="axis"><tbody><tr><th>视觉冲击 / 原创性</th><td>4.2</td></tr><tr><th>构图层级</th><td>4.2</td></tr><tr><th>字体表现</th><td>4.2</td></tr><tr><th>色彩与材质</th><td>4.2</td></tr><tr><th>细节完成度</th><td>4.2</td></tr><tr><th>基础可用性</th><td>4.2</td></tr></tbody></table>
+    <div class="occ ok">occlusion_overlap_check: always_on · no finding</div>
+    <p>score_only</p>
+    
+  </div>
+</section>
+
+</article>
+
+<article class="card" data-bucket="[0,10)" data-status="scored">
+  <header>
+    <div>
+      <h2>card_dsl_1e75a82d2e</h2>
+      <p>Case-01-low-power-010/card.dsl.png</p>
+    </div>
+    <div class="score"><b>5.00</b><span>/100</span><em>[0,10)</em></div>
+  </header>
+  <div class="rationale">image: 命中 [0,10) 档：属于单功能省电工具类型，黄色背景配三个圆形分类卡+大字数字68+一个主按钮；可见证据是默认外观的圆角方块按钮、纯色药丸标签和大块留白，系统字体无品牌体系；未进 [10,20) 因仅一个主操作、控件全部默认、空白占比过大、无多控件/筛选/列表等完整工作流。</div>
+  
+<section class="view">
+  <div class="shot"><img src="file:///D:/A2UI/CartTaskSpec/datasets/case-600-newSkill-gpt5.5-long/Case-01-low-power-010/card.dsl.png" alt="image screenshot" loading="lazy"></div>
+  <div class="view-body">
+    <h3>image <span>5.00/100</span></h3>
+    <table class="axis"><tbody><tr><th>视觉冲击 / 原创性</th><td>0.5</td></tr><tr><th>构图层级</th><td>0.5</td></tr><tr><th>字体表现</th><td>0.0</td></tr><tr><th>色彩与材质</th><td>0.7</td></tr><tr><th>细节完成度</th><td>0.1</td></tr><tr><th>基础可用性</th><td>0.7</td></tr></tbody></table>
+    <div class="occ ok">occlusion_overlap_check: always_on · no finding</div>
+    <p>命中 [0,10) 档：属于单功能省电工具类型，黄色背景配三个圆形分类卡+大字数字68+一个主按钮；可见证据是默认外观的圆角方块按钮、纯色药丸标签和大块留白，系统字体无品牌体系；未进 [10,20) 因仅一个主操作、控件全部默认、空白占比过大、无多控件/筛选/列表等完整工作流。</p>
+    
+  </div>
+</section>
+
+</article>
+
+<article class="card" data-bucket="[40,50)" data-status="scored">
+  <header>
+    <div>
+      <h2>card_dsl_e6cad02031</h2>
+      <p>Case-01-low-power-009/card.dsl.png</p>
+    </div>
+    <div class="score"><b>45.00</b><span>/100</span><em>[40,50)</em></div>
+  </header>
+  <div class="rationale">image: 命中 [40,50) 档：属于单屏车载仪表/控件场景；可见证据是深色背景、左侧带进度环的18%电量指示、三个白色信息卡（温度/天气/充电）、右侧导航胶囊按钮，构图与排版整洁。未进 [50,60) 因视觉系统偏通用深色车机样式，缺少更具辨识度的品牌语言与材质层次。</div>
+  
+<section class="view">
+  <div class="shot"><img src="file:///D:/A2UI/CartTaskSpec/datasets/case-600-newSkill-gpt5.5-long/Case-01-low-power-009/card.dsl.png" alt="image screenshot" loading="lazy"></div>
+  <div class="view-body">
+    <h3>image <span>45.00/100</span></h3>
+    <table class="axis"><tbody><tr><th>视觉冲击 / 原创性</th><td>3.7</td></tr><tr><th>构图层级</th><td>3.6</td></tr><tr><th>字体表现</th><td>3.1</td></tr><tr><th>色彩与材质</th><td>3.9</td></tr><tr><th>细节完成度</th><td>3.3</td></tr><tr><th>基础可用性</th><td>3.9</td></tr></tbody></table>
+    <div class="occ ok">occlusion_overlap_check: always_on · no finding</div>
+    <p>命中 [40,50) 档：属于单屏车载仪表/控件场景；可见证据是深色背景、左侧带进度环的18%电量指示、三个白色信息卡（温度/天气/充电）、右侧导航胶囊按钮，构图与排版整洁。未进 [50,60) 因视觉系统偏通用深色车机样式，缺少更具辨识度的品牌语言与材质层次。</p>
+    
+  </div>
+</section>
+
+</article>
+
+<article class="card" data-bucket="[40,50)" data-status="scored">
+  <header>
+    <div>
+      <h2>card_dsl_ec7f1c86ee</h2>
+      <p>Case-01-low-power-011/card.dsl.png</p>
+    </div>
+    <div class="score"><b>45.00</b><span>/100</span><em>[40,50)</em></div>
+  </header>
+  <div class="rationale">image: 命中 [40,50) 档：属于精炼移动端EV充电/导航工具单屏，可见证据是紫蓝橙渐变背景、18%环形进度、绿勾状态条、20:30预约提示和蓝色导航CTA。未进 [50,60) 因为仅单屏视图、缺少完整仪表盘或列表、视觉系统偏通用App Shell、品牌识别度有限。</div>
+  
+<section class="view">
+  <div class="shot"><img src="file:///D:/A2UI/CartTaskSpec/datasets/case-600-newSkill-gpt5.5-long/Case-01-low-power-011/card.dsl.png" alt="image screenshot" loading="lazy"></div>
+  <div class="view-body">
+    <h3>image <span>45.00/100</span></h3>
+    <table class="axis"><tbody><tr><th>视觉冲击 / 原创性</th><td>3.7</td></tr><tr><th>构图层级</th><td>3.6</td></tr><tr><th>字体表现</th><td>3.4</td></tr><tr><th>色彩与材质</th><td>3.9</td></tr><tr><th>细节完成度</th><td>3.3</td></tr><tr><th>基础可用性</th><td>3.9</td></tr></tbody></table>
+    <div class="occ ok">occlusion_overlap_check: always_on · no finding</div>
+    <p>命中 [40,50) 档：属于精炼移动端EV充电/导航工具单屏，可见证据是紫蓝橙渐变背景、18%环形进度、绿勾状态条、20:30预约提示和蓝色导航CTA。未进 [50,60) 因为仅单屏视图、缺少完整仪表盘或列表、视觉系统偏通用App Shell、品牌识别度有限。</p>
+    
+  </div>
+</section>
+
+</article>
+
+<article class="card" data-bucket="[20,30)" data-status="scored">
+  <header>
+    <div>
+      <h2>card_dsl_4690233cac</h2>
+      <p>Case-01-low-power-013/card.dsl.png</p>
+    </div>
+    <div class="score"><b>25.00</b><span>/100</span><em>[20,30)</em></div>
+  </header>
+  <div class="rationale">image: 命中 [20,30) 档：属于小型状态卡片控件；可见证据为深紫渐变背景、47% 大字读数、两个空占位方块、胶囊按钮和充电/歌单状态文字；视觉处理有刻意感，但内容稀薄、占位图空白，缺乏产品深度，未达 [30,40) 的多区域结构与组件丰富度。</div>
+  
+<section class="view">
+  <div class="shot"><img src="file:///D:/A2UI/CartTaskSpec/datasets/case-600-newSkill-gpt5.5-long/Case-01-low-power-013/card.dsl.png" alt="image screenshot" loading="lazy"></div>
+  <div class="view-body">
+    <h3>image <span>25.00/100</span></h3>
+    <table class="axis"><tbody><tr><th>视觉冲击 / 原创性</th><td>2.3</td></tr><tr><th>构图层级</th><td>2.0</td></tr><tr><th>字体表现</th><td>1.4</td></tr><tr><th>色彩与材质</th><td>2.2</td></tr><tr><th>细节完成度</th><td>1.5</td></tr><tr><th>基础可用性</th><td>2.2</td></tr></tbody></table>
+    <div class="occ ok">occlusion_overlap_check: always_on · no finding</div>
+    <p>命中 [20,30) 档：属于小型状态卡片控件；可见证据为深紫渐变背景、47% 大字读数、两个空占位方块、胶囊按钮和充电/歌单状态文字；视觉处理有刻意感，但内容稀薄、占位图空白，缺乏产品深度，未达 [30,40) 的多区域结构与组件丰富度。</p>
+    
+  </div>
+</section>
+
+</article>
+
+<article class="card" data-bucket="[70,80)" data-status="scored">
+  <header>
+    <div>
+      <h2>card_dsl_c1162018c6</h2>
+      <p>Case-01-low-power-012/card.dsl.png</p>
+    </div>
+    <div class="score"><b>77.50</b><span>/100</span><em>[70,80)</em></div>
+  </header>
+  <div class="rationale">image: score_only</div>
+  
+<section class="view">
+  <div class="shot"><img src="file:///D:/A2UI/CartTaskSpec/datasets/case-600-newSkill-gpt5.5-long/Case-01-low-power-012/card.dsl.png" alt="image screenshot" loading="lazy"></div>
+  <div class="view-body">
+    <h3>image <span>77.50/100</span></h3>
+    <table class="axis"><tbody><tr><th>视觉冲击 / 原创性</th><td>6.2</td></tr><tr><th>构图层级</th><td>6.2</td></tr><tr><th>字体表现</th><td>6.2</td></tr><tr><th>色彩与材质</th><td>6.2</td></tr><tr><th>细节完成度</th><td>6.2</td></tr><tr><th>基础可用性</th><td>6.2</td></tr></tbody></table>
+    <div class="occ ok">occlusion_overlap_check: always_on · no finding</div>
+    <p>score_only</p>
+    
+  </div>
+</section>
+
+</article>
+
+<article class="card" data-bucket="[0,10)" data-status="scored">
+  <header>
+    <div>
+      <h2>card_dsl_dafeb19e56</h2>
+      <p>Case-01-low-power-018/card.dsl.png</p>
+    </div>
+    <div class="score"><b>5.00</b><span>/100</span><em>[0,10)</em></div>
+  </header>
+  <div class="rationale">image: 命中 [0,10) 档：属于移动端电池/省电小组件类型；可见证据为橙色渐变背景、半圆进度环、晴雨读数卡与两条带单字图标的默认按钮；信息密度极低、缺少卡片阴影与层级、字体为系统字、组件语言为系统小组件默认；未进 [10,20) 因整体仅有单卡片+两条按钮、无筛选/列表/多面板/品牌系统，弱于低模板阈值。</div>
+  
+<section class="view">
+  <div class="shot"><img src="file:///D:/A2UI/CartTaskSpec/datasets/case-600-newSkill-gpt5.5-long/Case-01-low-power-018/card.dsl.png" alt="image screenshot" loading="lazy"></div>
+  <div class="view-body">
+    <h3>image <span>5.00/100</span></h3>
+    <table class="axis"><tbody><tr><th>视觉冲击 / 原创性</th><td>0.5</td></tr><tr><th>构图层级</th><td>0.5</td></tr><tr><th>字体表现</th><td>0.0</td></tr><tr><th>色彩与材质</th><td>0.7</td></tr><tr><th>细节完成度</th><td>0.0</td></tr><tr><th>基础可用性</th><td>0.7</td></tr></tbody></table>
+    <div class="occ ok">occlusion_overlap_check: always_on · no finding</div>
+    <p>命中 [0,10) 档：属于移动端电池/省电小组件类型；可见证据为橙色渐变背景、半圆进度环、晴雨读数卡与两条带单字图标的默认按钮；信息密度极低、缺少卡片阴影与层级、字体为系统字、组件语言为系统小组件默认；未进 [10,20) 因整体仅有单卡片+两条按钮、无筛选/列表/多面板/品牌系统，弱于低模板阈值。</p>
+    
+  </div>
+</section>
+
+</article>
+
+<article class="card" data-bucket="[10,20)" data-status="scored">
+  <header>
+    <div>
+      <h2>card_dsl_902d53d00f</h2>
+      <p>Case-01-low-power-014/card.dsl.png</p>
+    </div>
+    <div class="score"><b>15.00</b><span>/100</span><em>[10,20)</em></div>
+  </header>
+  <div class="rationale">image: 命中 [10,20) 档：属于单用途低电量工具/状态卡片，可见证据为橙色背景、16%大字、续航2h文本、白色充电站卡与三个关蓝牙/关定位/低亮度按钮，控件稀疏、仅一级信息层级。未进 [0,10) 因配色与排版有一定设计意图；未进 [20,30) 因缺少列表/多卡片工作流和组件深度。</div>
+  
+<section class="view">
+  <div class="shot"><img src="file:///D:/A2UI/CartTaskSpec/datasets/case-600-newSkill-gpt5.5-long/Case-01-low-power-014/card.dsl.png" alt="image screenshot" loading="lazy"></div>
+  <div class="view-body">
+    <h3>image <span>15.00/100</span></h3>
+    <table class="axis"><tbody><tr><th>视觉冲击 / 原创性</th><td>1.4</td></tr><tr><th>构图层级</th><td>1.3</td></tr><tr><th>字体表现</th><td>0.7</td></tr><tr><th>色彩与材质</th><td>1.5</td></tr><tr><th>细节完成度</th><td>0.8</td></tr><tr><th>基础可用性</th><td>1.5</td></tr></tbody></table>
+    <div class="occ ok">occlusion_overlap_check: always_on · no finding</div>
+    <p>命中 [10,20) 档：属于单用途低电量工具/状态卡片，可见证据为橙色背景、16%大字、续航2h文本、白色充电站卡与三个关蓝牙/关定位/低亮度按钮，控件稀疏、仅一级信息层级。未进 [0,10) 因配色与排版有一定设计意图；未进 [20,30) 因缺少列表/多卡片工作流和组件深度。</p>
+    
+  </div>
+</section>
+
+</article>
+
+<article class="card" data-bucket="[10,20)" data-status="scored">
+  <header>
+    <div>
+      <h2>card_dsl_d268b49967</h2>
+      <p>Case-01-low-power-020/card.dsl.png</p>
+    </div>
+    <div class="score"><b>15.00</b><span>/100</span><em>[10,20)</em></div>
+  </header>
+  <div class="rationale">image: 命中 [10,20) 档：属于稀疏系统设置入口页；可见证据是深色背景上三个圆角卡片，每张含橙色警告图标与电池/存储/应用时长文字标签，布局稳定但卡片为默认深色组件、空白占比大、视觉语言通用、无品牌识别度；未进 [20,30) 因为缺少完整工作流与多控件协调，仅为三个并列入口。</div>
+  
+<section class="view">
+  <div class="shot"><img src="file:///D:/A2UI/CartTaskSpec/datasets/case-600-newSkill-gpt5.5-long/Case-01-low-power-020/card.dsl.png" alt="image screenshot" loading="lazy"></div>
+  <div class="view-body">
+    <h3>image <span>15.00/100</span></h3>
+    <table class="axis"><tbody><tr><th>视觉冲击 / 原创性</th><td>1.4</td></tr><tr><th>构图层级</th><td>1.4</td></tr><tr><th>字体表现</th><td>0.8</td></tr><tr><th>色彩与材质</th><td>1.6</td></tr><tr><th>细节完成度</th><td>0.7</td></tr><tr><th>基础可用性</th><td>1.6</td></tr></tbody></table>
+    <div class="occ ok">occlusion_overlap_check: always_on · no finding</div>
+    <p>命中 [10,20) 档：属于稀疏系统设置入口页；可见证据是深色背景上三个圆角卡片，每张含橙色警告图标与电池/存储/应用时长文字标签，布局稳定但卡片为默认深色组件、空白占比大、视觉语言通用、无品牌识别度；未进 [20,30) 因为缺少完整工作流与多控件协调，仅为三个并列入口。</p>
+    
+  </div>
+</section>
+
+</article>
+
+<article class="card" data-bucket="[50,60)" data-status="scored">
+  <header>
+    <div>
+      <h2>card_dsl_a635eaf539</h2>
+      <p>Case-01-low-power-015/card.dsl.png</p>
+    </div>
+    <div class="score"><b>56.25</b><span>/100</span><em>[50,60)</em></div>
+  </header>
+  <div class="rationale">image: score_only</div>
+  
+<section class="view">
+  <div class="shot"><img src="file:///D:/A2UI/CartTaskSpec/datasets/case-600-newSkill-gpt5.5-long/Case-01-low-power-015/card.dsl.png" alt="image screenshot" loading="lazy"></div>
+  <div class="view-body">
+    <h3>image <span>56.25/100</span></h3>
+    <table class="axis"><tbody><tr><th>视觉冲击 / 原创性</th><td>4.5</td></tr><tr><th>构图层级</th><td>4.5</td></tr><tr><th>字体表现</th><td>4.5</td></tr><tr><th>色彩与材质</th><td>4.5</td></tr><tr><th>细节完成度</th><td>4.5</td></tr><tr><th>基础可用性</th><td>4.5</td></tr></tbody></table>
+    <div class="occ ok">occlusion_overlap_check: always_on · no finding</div>
+    <p>score_only</p>
+    
+  </div>
+</section>
+
+</article>
+
+<article class="card" data-bucket="[50,60)" data-status="scored">
+  <header>
+    <div>
+      <h2>card_dsl_4c412ced32</h2>
+      <p>Case-01-low-power-019/card.dsl.png</p>
+    </div>
+    <div class="score"><b>55.00</b><span>/100</span><em>[50,60)</em></div>
+  </header>
+  <div class="rationale">image: 命中 [50,60) 档：属于移动端电池/电源管理工具页；可见证据是顶部低电标题+橙色20数值、红色胶囊状态条&quot;20%需处理&quot;、三张蓝/紫/绿配色卡片配图标与勾选按钮，类型一致、间距整齐、配色有节制。未进 [60,70) 因为品牌识别度一般、组件语言仍属通用移动端卡片模式、内容深度有限，缺乏更独特的视觉资产或层次。</div>
+  
+<section class="view">
+  <div class="shot"><img src="file:///D:/A2UI/CartTaskSpec/datasets/case-600-newSkill-gpt5.5-long/Case-01-low-power-019/card.dsl.png" alt="image screenshot" loading="lazy"></div>
+  <div class="view-body">
+    <h3>image <span>55.00/100</span></h3>
+    <table class="axis"><tbody><tr><th>视觉冲击 / 原创性</th><td>4.6</td></tr><tr><th>构图层级</th><td>4.6</td></tr><tr><th>字体表现</th><td>4.0</td></tr><tr><th>色彩与材质</th><td>4.8</td></tr><tr><th>细节完成度</th><td>3.9</td></tr><tr><th>基础可用性</th><td>4.8</td></tr></tbody></table>
+    <div class="occ ok">occlusion_overlap_check: always_on · no finding</div>
+    <p>命中 [50,60) 档：属于移动端电池/电源管理工具页；可见证据是顶部低电标题+橙色20数值、红色胶囊状态条&quot;20%需处理&quot;、三张蓝/紫/绿配色卡片配图标与勾选按钮，类型一致、间距整齐、配色有节制。未进 [60,70) 因为品牌识别度一般、组件语言仍属通用移动端卡片模式、内容深度有限，缺乏更独特的视觉资产或层次。</p>
+    
+  </div>
+</section>
+
+</article>
+
+<article class="card" data-bucket="[60,70)" data-status="scored">
+  <header>
+    <div>
+      <h2>card_dsl_27aad3cfa5</h2>
+      <p>Case-01-low-power-016/card.dsl.png</p>
+    </div>
+    <div class="score"><b>65.00</b><span>/100</span><em>[60,70)</em></div>
+  </header>
+  <div class="rationale">image: 命中 [60,70) 档：属于精致移动端状态/工具应用，可见橙色品牌主色、白色圆角卡片、粉色环形电量指示、清晰的低电提醒文字与三个快捷功能胶囊按钮，间距与排版成熟。未进 [70,80) 因品牌识别仍偏常规移动壳，圆环与胶囊为常见模式，缺乏更独特的视觉资产或3D插画。</div>
+  
+<section class="view">
+  <div class="shot"><img src="file:///D:/A2UI/CartTaskSpec/datasets/case-600-newSkill-gpt5.5-long/Case-01-low-power-016/card.dsl.png" alt="image screenshot" loading="lazy"></div>
+  <div class="view-body">
+    <h3>image <span>65.00/100</span></h3>
+    <table class="axis"><tbody><tr><th>视觉冲击 / 原创性</th><td>5.3</td></tr><tr><th>构图层级</th><td>5.3</td></tr><tr><th>字体表现</th><td>4.7</td></tr><tr><th>色彩与材质</th><td>5.5</td></tr><tr><th>细节完成度</th><td>4.9</td></tr><tr><th>基础可用性</th><td>5.5</td></tr></tbody></table>
+    <div class="occ ok">occlusion_overlap_check: always_on · no finding</div>
+    <p>命中 [60,70) 档：属于精致移动端状态/工具应用，可见橙色品牌主色、白色圆角卡片、粉色环形电量指示、清晰的低电提醒文字与三个快捷功能胶囊按钮，间距与排版成熟。未进 [70,80) 因品牌识别仍偏常规移动壳，圆环与胶囊为常见模式，缺乏更独特的视觉资产或3D插画。</p>
+    
+  </div>
+</section>
+
+</article>
+
+<article class="card" data-bucket="[50,60)" data-status="scored">
+  <header>
+    <div>
+      <h2>card_dsl_7b06bf59ac</h2>
+      <p>Case-01-low-power-017/card.dsl.png</p>
+    </div>
+    <div class="score"><b>50.00</b><span>/100</span><em>[50,60)</em></div>
+  </header>
+  <div class="rationale">image: score_only</div>
+  
+<section class="view">
+  <div class="shot"><img src="file:///D:/A2UI/CartTaskSpec/datasets/case-600-newSkill-gpt5.5-long/Case-01-low-power-017/card.dsl.png" alt="image screenshot" loading="lazy"></div>
+  <div class="view-body">
+    <h3>image <span>50.00/100</span></h3>
+    <table class="axis"><tbody><tr><th>视觉冲击 / 原创性</th><td>4.0</td></tr><tr><th>构图层级</th><td>4.0</td></tr><tr><th>字体表现</th><td>4.0</td></tr><tr><th>色彩与材质</th><td>4.0</td></tr><tr><th>细节完成度</th><td>4.0</td></tr><tr><th>基础可用性</th><td>4.0</td></tr></tbody></table>
+    <div class="occ ok">occlusion_overlap_check: always_on · no finding</div>
+    <p>score_only</p>
+    
+  </div>
+</section>
+
+</article>
+
+    </section>
+  </main>
+</body>
+</html>

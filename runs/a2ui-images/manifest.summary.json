@@ -1,0 +1,7 @@
+{
+  "created_at": "2026-07-09T08:24:37.692298+00:00",
+  "input": "D:\\code\\A2UI\\vlm\\aesthetic-v4-vlm-judge-package-20260624\\a2ui_png",
+  "out": "runs\\a2ui-images\\manifest.jsonl",
+  "profile": "aesthetic-v4",
+  "records": 601
+}

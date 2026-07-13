@@ -1,0 +1,13 @@
+{
+  "bucket_counts": {
+    "[0,10)": 2
+  },
+  "csv": "runs\\a2ui-minimax-smoke\\scores.minimax.csv",
+  "out": "runs\\a2ui-minimax-smoke\\report.minimax.html",
+  "profile": "aesthetic-v4",
+  "records": 2,
+  "score_breakdown": "on",
+  "status_counts": {
+    "scored": 2
+  }
+}

@@ -1,0 +1,21 @@
+{
+  "backend": "command",
+  "completed": 2,
+  "elapsed_seconds": 12.716,
+  "finished_at": "2026-07-09T08:22:38.527555+00:00",
+  "formal_report": false,
+  "occlusion_overlap_check": "always_on",
+  "out": "runs\\a2ui-minimax-smoke\\scores.minimax.jsonl",
+  "quality_config": {
+    "adaptive_viewports": "off",
+    "designer_review": "off",
+    "occlusion_overlap_check": "always_on",
+    "score_breakdown": "on"
+  },
+  "records_attempted": 2,
+  "resume": false,
+  "scored": 2,
+  "started_at": "2026-07-09T08:22:25.810784+00:00",
+  "viewport_selection": "auto",
+  "workers": 1
+}

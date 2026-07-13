@@ -1,0 +1,14 @@
+{
+  "backend": "model",
+  "case_image_name": "card.dsl.png",
+  "csv": "D:\\code\\A2UI\\vlm\\aesthetic-v4-vlm-judge-package-20260624\\runs\\case-600-long-l20\\scores.csv",
+  "finished_at": "2026-07-13T02:00:04.921516+00:00",
+  "input": "D:\\A2UI\\CartTaskSpec\\datasets\\case-600-newSkill-gpt5.5-long",
+  "manifest": "D:\\code\\A2UI\\vlm\\aesthetic-v4-vlm-judge-package-20260624\\runs\\case-600-long-l20\\manifest.jsonl",
+  "model": "MiniMax-M3",
+  "profile": "aesthetic-v4",
+  "records": 600,
+  "report": "D:\\code\\A2UI\\vlm\\aesthetic-v4-vlm-judge-package-20260624\\runs\\case-600-long-l20\\report.html",
+  "run_dir": "D:\\code\\A2UI\\vlm\\aesthetic-v4-vlm-judge-package-20260624\\runs\\case-600-long-l20",
+  "scores": "D:\\code\\A2UI\\vlm\\aesthetic-v4-vlm-judge-package-20260624\\runs\\case-600-long-l20\\scores.jsonl"
+}

@@ -1,0 +1,13 @@
+{
+  "backend": "model",
+  "csv": "D:\\code\\A2UI\\vlm\\aesthetic-v4-vlm-judge-package-20260624\\runs\\a2ui-runner-minimax-smoke\\scores.csv",
+  "finished_at": "2026-07-09T08:42:50.542561+00:00",
+  "input": "D:\\code\\A2UI\\vlm\\aesthetic-v4-vlm-judge-package-20260624\\a2ui_png",
+  "manifest": "D:\\code\\A2UI\\vlm\\aesthetic-v4-vlm-judge-package-20260624\\runs\\a2ui-runner-minimax-smoke\\manifest.jsonl",
+  "model": "MiniMax-M3",
+  "profile": "aesthetic-v4",
+  "records": 601,
+  "report": "D:\\code\\A2UI\\vlm\\aesthetic-v4-vlm-judge-package-20260624\\runs\\a2ui-runner-minimax-smoke\\report.html",
+  "run_dir": "D:\\code\\A2UI\\vlm\\aesthetic-v4-vlm-judge-package-20260624\\runs\\a2ui-runner-minimax-smoke",
+  "scores": "D:\\code\\A2UI\\vlm\\aesthetic-v4-vlm-judge-package-20260624\\runs\\a2ui-runner-minimax-smoke\\scores.jsonl"
+}

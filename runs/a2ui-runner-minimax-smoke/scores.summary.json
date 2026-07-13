@@ -1,0 +1,21 @@
+{
+  "backend": "command",
+  "completed": 1,
+  "elapsed_seconds": 24.045,
+  "finished_at": "2026-07-09T08:42:50.452150+00:00",
+  "formal_report": false,
+  "occlusion_overlap_check": "always_on",
+  "out": "D:\\code\\A2UI\\vlm\\aesthetic-v4-vlm-judge-package-20260624\\runs\\a2ui-runner-minimax-smoke\\scores.jsonl",
+  "quality_config": {
+    "adaptive_viewports": "off",
+    "designer_review": "off",
+    "occlusion_overlap_check": "always_on",
+    "score_breakdown": "on"
+  },
+  "records_attempted": 1,
+  "resume": false,
+  "scored": 1,
+  "started_at": "2026-07-09T08:42:26.406895+00:00",
+  "viewport_selection": "auto",
+  "workers": 1
+}

@@ -1,0 +1,2 @@
+id,status,score_100,bucket,aggregate_view,prompt_version,model,occlusion_overlap_check,occlusion_findings,occlusion_affected_axes,input_path,rationale
+card_dsl_61bd7a4eb9,scored,5.0,"[0,10)",image,aesthetic-v4,MiniMax-M3,always_on,[],[],D:\code\A2UI\vlm\aesthetic-v4-vlm-judge-package-20260624\a2ui_png\card.dsl.png,"image: 命中 [0,10) 档：属于单卡空白单页类型；可见证据是顶部一个橙色渐变小卡含日历图标、标题、时间与按钮，其余近 90% 屏幕为纯白空白，无导航、无其他内容、无视觉系统；未进 [10,20) 因为没有第二个控件/列表/页眉，整体仅一个小默认卡加大量空白，符合 tiny default form 判定。"

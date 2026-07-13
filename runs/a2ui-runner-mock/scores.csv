@@ -1,0 +1,3 @@
+id,status,score_100,bucket,aggregate_view,prompt_version,model,occlusion_overlap_check,occlusion_findings,occlusion_affected_axes,input_path,rationale
+card_dsl_61bd7a4eb9,scored,80.0,"[80,100]",image,aesthetic-v4,,always_on,[],[],D:\code\A2UI\vlm\aesthetic-v4-vlm-judge-package-20260624\a2ui_png\card.dsl.png,image: Deterministic mock score for pipeline validation only; do not treat this as an aesthetic judgment.
+case_01_low_power_001_card_dsl_1db6ed650b,scored,76.25,"[70,80)",image,aesthetic-v4,,always_on,[],[],D:\code\A2UI\vlm\aesthetic-v4-vlm-judge-package-20260624\a2ui_png\Case-01-low-power-001-card.dsl.png,image: Deterministic mock score for pipeline validation only; do not treat this as an aesthetic judgment.

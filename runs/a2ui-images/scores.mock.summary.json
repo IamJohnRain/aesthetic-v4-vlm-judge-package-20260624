@@ -1,0 +1,21 @@
+{
+  "backend": "mock",
+  "completed": 2,
+  "elapsed_seconds": 0.016,
+  "finished_at": "2026-07-09T08:25:04.175488+00:00",
+  "formal_report": false,
+  "occlusion_overlap_check": "always_on",
+  "out": "runs\\a2ui-images\\scores.mock.jsonl",
+  "quality_config": {
+    "adaptive_viewports": "off",
+    "designer_review": "off",
+    "occlusion_overlap_check": "always_on",
+    "score_breakdown": "on"
+  },
+  "records_attempted": 2,
+  "resume": false,
+  "scored": 2,
+  "started_at": "2026-07-09T08:25:04.158784+00:00",
+  "viewport_selection": "auto",
+  "workers": 1
+}

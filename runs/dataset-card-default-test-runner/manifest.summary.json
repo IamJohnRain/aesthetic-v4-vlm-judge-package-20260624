@@ -1,0 +1,8 @@
+{
+  "case_image_name": "card.dsl.png",
+  "created_at": "2026-07-13T01:14:29.949187+00:00",
+  "input": "D:\\code\\A2UI\\vlm\\aesthetic-v4-vlm-judge-package-20260624\\runs\\dataset-card-default-test-input",
+  "out": "D:\\code\\A2UI\\vlm\\aesthetic-v4-vlm-judge-package-20260624\\runs\\dataset-card-default-test-runner\\manifest.jsonl",
+  "profile": "aesthetic-v4",
+  "records": 2
+}

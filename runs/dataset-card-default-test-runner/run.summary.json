@@ -1,0 +1,14 @@
+{
+  "backend": "mock",
+  "case_image_name": "card.dsl.png",
+  "csv": "D:\\code\\A2UI\\vlm\\aesthetic-v4-vlm-judge-package-20260624\\runs\\dataset-card-default-test-runner\\scores.csv",
+  "finished_at": "2026-07-13T01:14:30.163581+00:00",
+  "input": "D:\\code\\A2UI\\vlm\\aesthetic-v4-vlm-judge-package-20260624\\runs\\dataset-card-default-test-input",
+  "manifest": "D:\\code\\A2UI\\vlm\\aesthetic-v4-vlm-judge-package-20260624\\runs\\dataset-card-default-test-runner\\manifest.jsonl",
+  "model": "mock",
+  "profile": "aesthetic-v4",
+  "records": 2,
+  "report": "D:\\code\\A2UI\\vlm\\aesthetic-v4-vlm-judge-package-20260624\\runs\\dataset-card-default-test-runner\\report.html",
+  "run_dir": "D:\\code\\A2UI\\vlm\\aesthetic-v4-vlm-judge-package-20260624\\runs\\dataset-card-default-test-runner",
+  "scores": "D:\\code\\A2UI\\vlm\\aesthetic-v4-vlm-judge-package-20260624\\runs\\dataset-card-default-test-runner\\scores.jsonl"
+}

@@ -1,0 +1,13 @@
+{
+  "backend": "mock",
+  "csv": "D:\\code\\A2UI\\vlm\\aesthetic-v4-vlm-judge-package-20260624\\runs\\a2ui-runner-mock\\scores.csv",
+  "finished_at": "2026-07-09T08:31:54.011844+00:00",
+  "input": "D:\\code\\A2UI\\vlm\\aesthetic-v4-vlm-judge-package-20260624\\a2ui_png",
+  "manifest": "D:\\code\\A2UI\\vlm\\aesthetic-v4-vlm-judge-package-20260624\\runs\\a2ui-runner-mock\\manifest.jsonl",
+  "model": "mock",
+  "profile": "aesthetic-v4",
+  "records": 601,
+  "report": "D:\\code\\A2UI\\vlm\\aesthetic-v4-vlm-judge-package-20260624\\runs\\a2ui-runner-mock\\report.html",
+  "run_dir": "D:\\code\\A2UI\\vlm\\aesthetic-v4-vlm-judge-package-20260624\\runs\\a2ui-runner-mock",
+  "scores": "D:\\code\\A2UI\\vlm\\aesthetic-v4-vlm-judge-package-20260624\\runs\\a2ui-runner-mock\\scores.jsonl"
+}

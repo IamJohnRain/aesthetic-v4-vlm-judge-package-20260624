@@ -1,0 +1,8 @@
+{
+  "case_image_name": "target.png",
+  "created_at": "2026-07-13T01:12:11.125579+00:00",
+  "input": "D:\\code\\A2UI\\vlm\\aesthetic-v4-vlm-judge-package-20260624\\runs\\dataset-layout-test-input",
+  "out": "runs\\dataset-layout-test\\manifest.jsonl",
+  "profile": "aesthetic-v4",
+  "records": 2
+}
