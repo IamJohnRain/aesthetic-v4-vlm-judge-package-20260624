@@ -1,0 +1,21 @@
+{
+  "backend": "mock",
+  "completed": 1,
+  "elapsed_seconds": 0.013,
+  "finished_at": "2026-07-13T02:07:54.245462+00:00",
+  "formal_report": false,
+  "occlusion_overlap_check": "always_on",
+  "out": "D:\\code\\A2UI\\vlm\\aesthetic-v4-vlm-judge-package-20260624\\runs\\provider-switch-mock\\scores.jsonl",
+  "quality_config": {
+    "adaptive_viewports": "off",
+    "designer_review": "off",
+    "occlusion_overlap_check": "always_on",
+    "score_breakdown": "on"
+  },
+  "records_attempted": 1,
+  "resume": false,
+  "scored": 1,
+  "started_at": "2026-07-13T02:07:54.231931+00:00",
+  "viewport_selection": "auto",
+  "workers": 1
+}

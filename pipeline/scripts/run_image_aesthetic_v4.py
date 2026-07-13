@@ -16,6 +16,7 @@ import build_image_manifest
 
 
 DEFAULT_CASE_IMAGE_NAME = "card.dsl.png"
+DEFAULT_MODEL_PROVIDER = "minimax"
 
 
 def load_env_file(path: Path) -> dict[str, str]:
@@ -54,9 +55,44 @@ def shell_quote(value: str | Path) -> str:
     return shlex.quote(text)
 
 
+def provider_env_name(provider: str, suffix: str) -> str:
+    normalized = provider.strip().upper().replace("-", "_")
+    return f"{normalized}_{suffix}"
+
+
+def resolve_model_provider(args: argparse.Namespace, env_path: Path) -> dict[str, str]:
+    provider = args.model_provider.strip().lower().replace("-", "_")
+    prefix = provider.upper()
+    api_url_env = provider_env_name(provider, "API_URL")
+    api_key_env = provider_env_name(provider, "API_KEY")
+    model_env = provider_env_name(provider, "MODEL")
+    api_url = os.environ.get(api_url_env)
+    api_key = os.environ.get(api_key_env)
+    model = os.environ.get(model_env)
+    missing = [
+        name
+        for name, value in (
+            (api_url_env, api_url),
+            (api_key_env, api_key),
+            (model_env, model),
+        )
+        if not value
+    ]
+    if missing:
+        raise SystemExit(
+            f"model provider '{provider}' is missing {', '.join(missing)}; add them to {env_path}"
+        )
+    return {
+        "provider": provider,
+        "prefix": prefix,
+        "api_url": str(api_url),
+        "api_key_env": api_key_env,
+        "model": str(model),
+    }
+
+
 def build_judge_command(args: argparse.Namespace, scripts_dir: Path) -> str:
-    api_url = os.environ.get("MINIMAX_API_URL", "https://api.minimaxi.com/v1/chat/completions")
-    model = os.environ.get("MINIMAX_MODEL", "MiniMax-M3")
+    provider_config = resolve_model_provider(args, Path(args._env_path))
     prompt_version = os.environ.get("PANGU_JUDGE_PROMPT_VERSION", "aesthetic-v4")
     output_mode = "score-only" if args.score_only else os.environ.get("PANGU_JUDGE_OUTPUT_MODE", "full")
     timeout = os.environ.get("PANGU_JUDGE_TIMEOUT", "240")
@@ -66,11 +102,11 @@ def build_judge_command(args: argparse.Namespace, scripts_dir: Path) -> str:
         sys.executable,
         str(judge_script),
         "--base-url",
-        api_url,
+        provider_config["api_url"],
         "--api-key-env",
-        "MINIMAX_API_KEY",
+        provider_config["api_key_env"],
         "--model",
-        model,
+        provider_config["model"],
         "--prompt-version",
         prompt_version,
         "--output-mode",
@@ -109,6 +145,15 @@ def main() -> int:
     )
     parser.add_argument("--all-images", action="store_true", help="Recursively evaluate all supported images.")
     parser.add_argument("--backend", choices=["model", "mock"], default=os.environ.get("AESTHETIC_V4_BACKEND", "model"))
+    parser.add_argument(
+        "--model-provider",
+        default=os.environ.get("AESTHETIC_V4_MODEL_PROVIDER", DEFAULT_MODEL_PROVIDER),
+        help=(
+            "OpenAI-compatible provider prefix from env, e.g. minimax reads "
+            "MINIMAX_API_URL/MINIMAX_API_KEY/MINIMAX_MODEL; doubao reads "
+            "DOUBAO_API_URL/DOUBAO_API_KEY/DOUBAO_MODEL."
+        ),
+    )
     parser.add_argument("--workers", type=int, default=int(os.environ.get("AESTHETIC_V4_WORKERS", "1")))
     parser.add_argument("--judge-retries", type=int, default=int(os.environ.get("AESTHETIC_JUDGE_RETRIES", "3")))
     parser.add_argument("--limit", type=int, default=0)
@@ -132,6 +177,7 @@ def main() -> int:
         default=os.environ.get("AESTHETIC_V4_DESIGNER_REVIEW", "off"),
     )
     args = parser.parse_args()
+    args._env_path = str(env_path)
 
     input_path = resolve_path(args.input, Path.cwd())
     run_dir = resolve_path(args.run_dir, repo_root)
@@ -198,8 +244,7 @@ def main() -> int:
     if args.backend == "mock":
         score_cmd.extend(["--backend", "mock"])
     else:
-        if not os.environ.get("MINIMAX_API_KEY"):
-            raise SystemExit(f"MINIMAX_API_KEY is not set; add it to {env_path}")
+        provider_config = resolve_model_provider(args, env_path)
         score_cmd.extend(["--backend", "command", "--judge-command", build_judge_command(args, scripts_dir)])
 
     run_command(score_cmd, cwd=repo_root)
@@ -225,7 +270,8 @@ def main() -> int:
             "input": str(input_path),
             "run_dir": str(run_dir),
             "backend": args.backend,
-            "model": os.environ.get("MINIMAX_MODEL") if args.backend == "model" else "mock",
+            "model_provider": provider_config["provider"] if args.backend == "model" else "mock",
+            "model": provider_config["model"] if args.backend == "model" else "mock",
             "records": len(records),
             "case_image_name": case_image_name,
             "manifest": str(manifest_path),
