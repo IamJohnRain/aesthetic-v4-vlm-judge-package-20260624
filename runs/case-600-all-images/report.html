@@ -1,0 +1,1437 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>aesthetic-v4 report</title>
+  <style>
+    :root { color-scheme: light; --bg: #f7f7f5; --panel: #fff; --text: #171717; --muted: #666b73; --line: #d9ddd6; --accent: #1f6f61; }
+    * { box-sizing: border-box; }
+    body { margin: 0; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; background: var(--bg); color: var(--text); }
+    body > header { padding: 24px; border-bottom: 1px solid var(--line); background: #fff; position: sticky; top: 0; z-index: 2; }
+    h1 { margin: 0 0 6px; font-size: 24px; }
+    .meta { color: var(--muted); font-size: 13px; display: flex; gap: 14px; flex-wrap: wrap; }
+    main { display: grid; grid-template-columns: minmax(210px, 260px) 1fr; gap: 18px; padding: 18px; }
+    aside { align-self: start; position: sticky; top: 98px; background: var(--panel); border: 1px solid var(--line); border-radius: 8px; padding: 14px; }
+    table { border-collapse: collapse; width: 100%; }
+    th, td { border-bottom: 1px solid var(--line); padding: 7px 0; font-size: 13px; text-align: left; }
+    td { text-align: right; color: var(--muted); }
+    .cards { display: grid; gap: 14px; }
+    .card { background: var(--panel); border: 1px solid var(--line); border-radius: 8px; overflow: hidden; }
+    .card > header { display: flex; justify-content: space-between; gap: 16px; padding: 14px; border-bottom: 1px solid var(--line); }
+    h2 { margin: 0; font-size: 17px; }
+    h2 + p { margin: 5px 0 0; font-size: 12px; color: var(--muted); overflow-wrap: anywhere; }
+    .score { text-align: right; min-width: 110px; }
+    .score b { font-size: 28px; line-height: 1; }
+    .score span { color: var(--muted); font-size: 12px; }
+    .score em { display: block; margin-top: 4px; color: var(--accent); font-style: normal; font-weight: 650; }
+    .rationale { padding: 14px; border-bottom: 1px solid var(--line); color: #2c3035; line-height: 1.55; font-size: 14px; }
+    .view { display: grid; grid-template-columns: minmax(280px, 42%) 1fr; gap: 14px; padding: 14px; border-top: 1px solid var(--line); }
+    .shot { background: #ebeee9; border: 1px solid var(--line); border-radius: 6px; overflow: hidden; min-height: 180px; display: grid; place-items: center; }
+    .shot img { width: 100%; height: auto; display: block; }
+    .view h3 { margin: 0 0 10px; font-size: 15px; }
+    .view h3 span { color: var(--muted); font-weight: 500; margin-left: 8px; }
+    .axis { margin-bottom: 10px; }
+    .occ { margin: 8px 0; font-size: 12px; color: var(--muted); }
+    .occ.warn { color: #8a4b13; font-weight: 650; }
+    .occ.ok { color: #4d655d; }
+    .occ-table { margin: 8px 0 10px; }
+    .occ-table th, .occ-table td { text-align: left; vertical-align: top; padding: 6px 8px 6px 0; }
+    .designer-review { margin-top: 10px; padding-top: 10px; border-top: 1px solid var(--line); font-size: 13px; }
+    .designer-review h4 { margin: 8px 0 4px; font-size: 13px; }
+    .designer-review ul { margin: 0 0 8px 18px; padding: 0; color: #2c3035; }
+    .view p { margin: 0; color: #2c3035; line-height: 1.55; font-size: 13px; }
+    .missing { color: var(--muted); font-size: 13px; }
+    @media (max-width: 860px) { main { grid-template-columns: 1fr; } aside { position: static; } .view { grid-template-columns: 1fr; } }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>aesthetic-v4 VLM Judge Report</h1>
+    <div class="meta">
+      <span>generated 2026-07-14 10:31:05</span>
+      <span>records 60</span>
+      <span>scored 59</span>
+      <span>partial/failed 1</span>
+    </div>
+  </header>
+  <main>
+    <aside>
+      <h2>分档统计</h2>
+      <table><tbody><tr><th>[0,10)</th><td>29</td></tr><tr><th>[10,20)</th><td>10</td></tr><tr><th>[20,30)</th><td>10</td></tr><tr><th>[30,40)</th><td>0</td></tr><tr><th>[40,50)</th><td>6</td></tr><tr><th>[50,60)</th><td>1</td></tr><tr><th>[60,70)</th><td>0</td></tr><tr><th>[70,80)</th><td>2</td></tr><tr><th>[80,100]</th><td>1</td></tr></tbody></table>
+    </aside>
+    <section class="cards">
+      
+<article class="card" data-bucket="[70,80)" data-status="scored">
+  <header>
+    <div>
+      <h2>card_dsl_98c6943138</h2>
+      <p>Case-01-low-power-001/card.dsl.png</p>
+    </div>
+    <div class="score"><b>72.50</b><span>/100</span><em>[70,80)</em></div>
+  </header>
+  <div class="rationale">image: score_only</div>
+  
+<section class="view">
+  <div class="shot"><img src="file:///D:/code/A2UI/vlm/aesthetic-v4-vlm-judge-package-20260624/input/test_60/Case-01-low-power-001/card.dsl.png" alt="image screenshot" loading="lazy"></div>
+  <div class="view-body">
+    <h3>image <span>72.50/100</span></h3>
+    <table class="axis"><tbody><tr><th>视觉冲击 / 原创性</th><td>5.8</td></tr><tr><th>构图层级</th><td>5.8</td></tr><tr><th>字体表现</th><td>5.8</td></tr><tr><th>色彩与材质</th><td>5.8</td></tr><tr><th>细节完成度</th><td>5.8</td></tr><tr><th>基础可用性</th><td>5.8</td></tr></tbody></table>
+    <div class="occ ok">occlusion_overlap_check: always_on · no finding</div>
+    <p>score_only</p>
+    
+  </div>
+</section>
+
+</article>
+
+<article class="card" data-bucket="[0,10)" data-status="scored">
+  <header>
+    <div>
+      <h2>card_dsl_7ec5702f6c</h2>
+      <p>Case-01-low-power-006/card.dsl.png</p>
+    </div>
+    <div class="score"><b>5.00</b><span>/100</span><em>[0,10)</em></div>
+  </header>
+  <div class="rationale">image: 命中 [0,10) 档：属于单卡工具型 widget，原型类似系统级省电快捷卡片；可见证据为深色圆角容器、电池图标、标题&#x27;低电模式&#x27;与副标题、三枚信息性胶囊按钮(亮度/定位/蓝牙)与一枚绿色主 CTA&#x27;开启省电&#x27;，无真实交互深度；未进 [10,20) 因为该卡仅有标签式按钮并非多控件表单，缺乏分区/筛选/列表等结构，视觉为系统默认暗底加单色高亮，无品牌系统可言。</div>
+  
+<section class="view">
+  <div class="shot"><img src="file:///D:/code/A2UI/vlm/aesthetic-v4-vlm-judge-package-20260624/input/test_60/Case-01-low-power-006/card.dsl.png" alt="image screenshot" loading="lazy"></div>
+  <div class="view-body">
+    <h3>image <span>5.00/100</span></h3>
+    <table class="axis"><tbody><tr><th>视觉冲击 / 原创性</th><td>0.5</td></tr><tr><th>构图层级</th><td>0.5</td></tr><tr><th>字体表现</th><td>0.0</td></tr><tr><th>色彩与材质</th><td>0.7</td></tr><tr><th>细节完成度</th><td>0.1</td></tr><tr><th>基础可用性</th><td>0.7</td></tr></tbody></table>
+    <div class="occ ok">occlusion_overlap_check: always_on · no finding</div>
+    <p>命中 [0,10) 档：属于单卡工具型 widget，原型类似系统级省电快捷卡片；可见证据为深色圆角容器、电池图标、标题&#x27;低电模式&#x27;与副标题、三枚信息性胶囊按钮(亮度/定位/蓝牙)与一枚绿色主 CTA&#x27;开启省电&#x27;，无真实交互深度；未进 [10,20) 因为该卡仅有标签式按钮并非多控件表单，缺乏分区/筛选/列表等结构，视觉为系统默认暗底加单色高亮，无品牌系统可言。</p>
+    
+  </div>
+</section>
+
+</article>
+
+<article class="card" data-bucket="[0,10)" data-status="scored">
+  <header>
+    <div>
+      <h2>card_dsl_d45286bf49</h2>
+      <p>Case-02-earphone-music-001/card.dsl.png</p>
+    </div>
+    <div class="score"><b>5.00</b><span>/100</span><em>[0,10)</em></div>
+  </header>
+  <div class="rationale">image: 命中 [0,10) 档：属于单卡手表/通知极简屏；可见证据为深色背景上一张音乐图标卡加底部时间&#x27;10:30&#x27;和&#x27;项目同步会&#x27;，无设计系统、无层次、无品牌；未进 [10,20) 因仅一张默认卡+时间文字，无任何控件/列表/导航/表头等多元素模板结构，接近系统级极简通知。</div>
+  
+<section class="view">
+  <div class="shot"><img src="file:///D:/code/A2UI/vlm/aesthetic-v4-vlm-judge-package-20260624/input/test_60/Case-02-earphone-music-001/card.dsl.png" alt="image screenshot" loading="lazy"></div>
+  <div class="view-body">
+    <h3>image <span>5.00/100</span></h3>
+    <table class="axis"><tbody><tr><th>视觉冲击 / 原创性</th><td>0.5</td></tr><tr><th>构图层级</th><td>0.5</td></tr><tr><th>字体表现</th><td>0.0</td></tr><tr><th>色彩与材质</th><td>0.7</td></tr><tr><th>细节完成度</th><td>0.1</td></tr><tr><th>基础可用性</th><td>0.7</td></tr></tbody></table>
+    <div class="occ ok">occlusion_overlap_check: always_on · no finding</div>
+    <p>命中 [0,10) 档：属于单卡手表/通知极简屏；可见证据为深色背景上一张音乐图标卡加底部时间&#x27;10:30&#x27;和&#x27;项目同步会&#x27;，无设计系统、无层次、无品牌；未进 [10,20) 因仅一张默认卡+时间文字，无任何控件/列表/导航/表头等多元素模板结构，接近系统级极简通知。</p>
+    
+  </div>
+</section>
+
+</article>
+
+<article class="card" data-bucket="[0,10)" data-status="scored">
+  <header>
+    <div>
+      <h2>card_dsl_2f39192544</h2>
+      <p>Case-02-earphone-music-006/card.dsl.png</p>
+    </div>
+    <div class="score"><b>5.00</b><span>/100</span><em>[0,10)</em></div>
+  </header>
+  <div class="rationale">image: 命中 [0,10) 档：属于智能音箱/单屏工具类极简小程序，可见证据为紫色渐变背景、一个音乐图标、一行26°C多云天气、一个已连接徽章和单一绿色听歌按钮；无列表、无导航、无系统化组件；空白占比极大、内容极薄，未达 [10,20) 所需的若干控件与列表结构。</div>
+  
+<section class="view">
+  <div class="shot"><img src="file:///D:/code/A2UI/vlm/aesthetic-v4-vlm-judge-package-20260624/input/test_60/Case-02-earphone-music-006/card.dsl.png" alt="image screenshot" loading="lazy"></div>
+  <div class="view-body">
+    <h3>image <span>5.00/100</span></h3>
+    <table class="axis"><tbody><tr><th>视觉冲击 / 原创性</th><td>0.5</td></tr><tr><th>构图层级</th><td>0.4</td></tr><tr><th>字体表现</th><td>0.1</td></tr><tr><th>色彩与材质</th><td>0.6</td></tr><tr><th>细节完成度</th><td>0.0</td></tr><tr><th>基础可用性</th><td>0.6</td></tr></tbody></table>
+    <div class="occ ok">occlusion_overlap_check: always_on · no finding</div>
+    <p>命中 [0,10) 档：属于智能音箱/单屏工具类极简小程序，可见证据为紫色渐变背景、一个音乐图标、一行26°C多云天气、一个已连接徽章和单一绿色听歌按钮；无列表、无导航、无系统化组件；空白占比极大、内容极薄，未达 [10,20) 所需的若干控件与列表结构。</p>
+    
+  </div>
+</section>
+
+</article>
+
+<article class="card" data-bucket="[10,20)" data-status="scored">
+  <header>
+    <div>
+      <h2>card_dsl_e6f9042451</h2>
+      <p>Case-03-anti-addiction-001/card.dsl.png</p>
+    </div>
+    <div class="score"><b>15.00</b><span>/100</span><em>[10,20)</em></div>
+  </header>
+  <div class="rationale">image: 命中 [10,20) 档：属于单用途小组件/管控弹窗类型；可见证据是两张白卡+三个橙色勾选框+两个大圆角按钮(橙/蓝)，排版直白、字体系统默认、配色仅依赖橙蓝对比、卡片无阴影层级、底部大量留白，文本&#x27;关闭游戏…&#x27;被截断但属于常规省略；未进 [20,30) 因为没有完整多面板工作流、缺品牌色系与组件深度，仅是默认样式的简单工具。</div>
+  
+<section class="view">
+  <div class="shot"><img src="file:///D:/code/A2UI/vlm/aesthetic-v4-vlm-judge-package-20260624/input/test_60/Case-03-anti-addiction-001/card.dsl.png" alt="image screenshot" loading="lazy"></div>
+  <div class="view-body">
+    <h3>image <span>15.00/100</span></h3>
+    <table class="axis"><tbody><tr><th>视觉冲击 / 原创性</th><td>1.4</td></tr><tr><th>构图层级</th><td>1.4</td></tr><tr><th>字体表现</th><td>0.8</td></tr><tr><th>色彩与材质</th><td>1.6</td></tr><tr><th>细节完成度</th><td>0.7</td></tr><tr><th>基础可用性</th><td>1.6</td></tr></tbody></table>
+    <div class="occ ok">occlusion_overlap_check: always_on · no finding</div>
+    <p>命中 [10,20) 档：属于单用途小组件/管控弹窗类型；可见证据是两张白卡+三个橙色勾选框+两个大圆角按钮(橙/蓝)，排版直白、字体系统默认、配色仅依赖橙蓝对比、卡片无阴影层级、底部大量留白，文本&#x27;关闭游戏…&#x27;被截断但属于常规省略；未进 [20,30) 因为没有完整多面板工作流、缺品牌色系与组件深度，仅是默认样式的简单工具。</p>
+    
+  </div>
+</section>
+
+</article>
+
+<article class="card" data-bucket="[0,10)" data-status="scored">
+  <header>
+    <div>
+      <h2>card_dsl_6b2ffacc26</h2>
+      <p>Case-03-anti-addiction-006/card.dsl.png</p>
+    </div>
+    <div class="score"><b>5.00</b><span>/100</span><em>[0,10)</em></div>
+  </header>
+  <div class="rationale">image: 命中 [0,10) 档：属于极简屏幕时间/风险提示类玩具型小工具。可见证据为顶部一个橙色&#x27;去设置&#x27;按钮、中部一枚灰色卡片配秒表图标显示&#x27;今日已用42分钟&#x27;、底部一个橙色&#x27;危险 超时风险&#x27;按钮，其余大面积留白。仅系统默认字体与两块纯色按钮，比例松散、无品牌视觉系统、无状态层次；未进 [10,20) 因缺乏多控件/筛选/列表等可识别的页面骨架与表单深度。</div>
+  
+<section class="view">
+  <div class="shot"><img src="file:///D:/code/A2UI/vlm/aesthetic-v4-vlm-judge-package-20260624/input/test_60/Case-03-anti-addiction-006/card.dsl.png" alt="image screenshot" loading="lazy"></div>
+  <div class="view-body">
+    <h3>image <span>5.00/100</span></h3>
+    <table class="axis"><tbody><tr><th>视觉冲击 / 原创性</th><td>0.5</td></tr><tr><th>构图层级</th><td>0.5</td></tr><tr><th>字体表现</th><td>0.0</td></tr><tr><th>色彩与材质</th><td>0.7</td></tr><tr><th>细节完成度</th><td>0.1</td></tr><tr><th>基础可用性</th><td>0.7</td></tr></tbody></table>
+    <div class="occ ok">occlusion_overlap_check: always_on · no finding</div>
+    <p>命中 [0,10) 档：属于极简屏幕时间/风险提示类玩具型小工具。可见证据为顶部一个橙色&#x27;去设置&#x27;按钮、中部一枚灰色卡片配秒表图标显示&#x27;今日已用42分钟&#x27;、底部一个橙色&#x27;危险 超时风险&#x27;按钮，其余大面积留白。仅系统默认字体与两块纯色按钮，比例松散、无品牌视觉系统、无状态层次；未进 [10,20) 因缺乏多控件/筛选/列表等可识别的页面骨架与表单深度。</p>
+    
+  </div>
+</section>
+
+</article>
+
+<article class="card" data-bucket="[20,30)" data-status="scored">
+  <header>
+    <div>
+      <h2>card_dsl_27addf6c60</h2>
+      <p>Case-04-focus-001/card.dsl.png</p>
+    </div>
+    <div class="score"><b>25.00</b><span>/100</span><em>[20,30)</em></div>
+  </header>
+  <div class="rationale">image: 命中 [20,30) 档：属于手机小部件/双卡工具页类型；可见证据为紫色渐变背景、左侧免打扰状态卡含月牙图标与白色开关按钮，右侧白色天气卡显示26°C与空气质量，版式分两块、留白多。视觉处理有渐变与圆角但内容薄，未进更高档因为缺少多区块层次、图表、列表深度，仅是简单双卡小部件。</div>
+  
+<section class="view">
+  <div class="shot"><img src="file:///D:/code/A2UI/vlm/aesthetic-v4-vlm-judge-package-20260624/input/test_60/Case-04-focus-001/card.dsl.png" alt="image screenshot" loading="lazy"></div>
+  <div class="view-body">
+    <h3>image <span>25.00/100</span></h3>
+    <table class="axis"><tbody><tr><th>视觉冲击 / 原创性</th><td>2.2</td></tr><tr><th>构图层级</th><td>1.9</td></tr><tr><th>字体表现</th><td>1.6</td></tr><tr><th>色彩与材质</th><td>2.1</td></tr><tr><th>细节完成度</th><td>1.7</td></tr><tr><th>基础可用性</th><td>2.1</td></tr></tbody></table>
+    <div class="occ ok">occlusion_overlap_check: always_on · no finding</div>
+    <p>命中 [20,30) 档：属于手机小部件/双卡工具页类型；可见证据为紫色渐变背景、左侧免打扰状态卡含月牙图标与白色开关按钮，右侧白色天气卡显示26°C与空气质量，版式分两块、留白多。视觉处理有渐变与圆角但内容薄，未进更高档因为缺少多区块层次、图表、列表深度，仅是简单双卡小部件。</p>
+    
+  </div>
+</section>
+
+</article>
+
+<article class="card" data-bucket="[40,50)" data-status="scored">
+  <header>
+    <div>
+      <h2>card_dsl_49204e9f2b</h2>
+      <p>Case-04-focus-006/card.dsl.png</p>
+    </div>
+    <div class="score"><b>43.75</b><span>/100</span><em>[40,50)</em></div>
+  </header>
+  <div class="rationale">image: score_only</div>
+  
+<section class="view">
+  <div class="shot"><img src="file:///D:/code/A2UI/vlm/aesthetic-v4-vlm-judge-package-20260624/input/test_60/Case-04-focus-006/card.dsl.png" alt="image screenshot" loading="lazy"></div>
+  <div class="view-body">
+    <h3>image <span>43.75/100</span></h3>
+    <table class="axis"><tbody><tr><th>视觉冲击 / 原创性</th><td>3.5</td></tr><tr><th>构图层级</th><td>3.5</td></tr><tr><th>字体表现</th><td>3.5</td></tr><tr><th>色彩与材质</th><td>3.5</td></tr><tr><th>细节完成度</th><td>3.5</td></tr><tr><th>基础可用性</th><td>3.5</td></tr></tbody></table>
+    <div class="occ ok">occlusion_overlap_check: always_on · no finding</div>
+    <p>score_only</p>
+    
+  </div>
+</section>
+
+</article>
+
+<article class="card" data-bucket="[0,10)" data-status="scored">
+  <header>
+    <div>
+      <h2>card_dsl_038f50add5</h2>
+      <p>Case-05-agenda-001/card.dsl.png</p>
+    </div>
+    <div class="score"><b>5.00</b><span>/100</span><em>[0,10)</em></div>
+  </header>
+  <div class="rationale">image: 命中 [0,10) 档：属于空状态提醒/工具型小卡片，原型为空提醒表单＋单操作按钮。证据：标题&#x27;会议提醒&#x27;＋蓝色时段信息卡＋一行天气文字＋灰色&#x27;打开日历&#x27;按钮，四周大片留白，无系统化视觉语言。未进 [10,20) 因控件仅一组信息＋一按钮，无任何次级结构、筛选或列表，无视觉层次可言。</div>
+  
+<section class="view">
+  <div class="shot"><img src="file:///D:/code/A2UI/vlm/aesthetic-v4-vlm-judge-package-20260624/input/test_60/Case-05-agenda-001/card.dsl.png" alt="image screenshot" loading="lazy"></div>
+  <div class="view-body">
+    <h3>image <span>5.00/100</span></h3>
+    <table class="axis"><tbody><tr><th>视觉冲击 / 原创性</th><td>0.7</td></tr><tr><th>构图层级</th><td>0.4</td></tr><tr><th>字体表现</th><td>0.0</td></tr><tr><th>色彩与材质</th><td>0.6</td></tr><tr><th>细节完成度</th><td>0.2</td></tr><tr><th>基础可用性</th><td>0.6</td></tr></tbody></table>
+    <div class="occ ok">occlusion_overlap_check: always_on · no finding</div>
+    <p>命中 [0,10) 档：属于空状态提醒/工具型小卡片，原型为空提醒表单＋单操作按钮。证据：标题&#x27;会议提醒&#x27;＋蓝色时段信息卡＋一行天气文字＋灰色&#x27;打开日历&#x27;按钮，四周大片留白，无系统化视觉语言。未进 [10,20) 因控件仅一组信息＋一按钮，无任何次级结构、筛选或列表，无视觉层次可言。</p>
+    
+  </div>
+</section>
+
+</article>
+
+<article class="card" data-bucket="[70,80)" data-status="scored">
+  <header>
+    <div>
+      <h2>card_dsl_003d287ebb</h2>
+      <p>Case-05-agenda-006/card.dsl.png</p>
+    </div>
+    <div class="score"><b>77.50</b><span>/100</span><em>[70,80)</em></div>
+  </header>
+  <div class="rationale">image: score_only</div>
+  
+<section class="view">
+  <div class="shot"><img src="file:///D:/code/A2UI/vlm/aesthetic-v4-vlm-judge-package-20260624/input/test_60/Case-05-agenda-006/card.dsl.png" alt="image screenshot" loading="lazy"></div>
+  <div class="view-body">
+    <h3>image <span>77.50/100</span></h3>
+    <table class="axis"><tbody><tr><th>视觉冲击 / 原创性</th><td>6.2</td></tr><tr><th>构图层级</th><td>6.2</td></tr><tr><th>字体表现</th><td>6.2</td></tr><tr><th>色彩与材质</th><td>6.2</td></tr><tr><th>细节完成度</th><td>6.2</td></tr><tr><th>基础可用性</th><td>6.2</td></tr></tbody></table>
+    <div class="occ ok">occlusion_overlap_check: always_on · no finding</div>
+    <p>score_only</p>
+    
+  </div>
+</section>
+
+</article>
+
+<article class="card" data-bucket="[0,10)" data-status="scored">
+  <header>
+    <div>
+      <h2>card_dsl_c1fe0574a5</h2>
+      <p>Case-06-memory-clean-001/card.dsl.png</p>
+    </div>
+    <div class="score"><b>5.00</b><span>/100</span><em>[0,10)</em></div>
+  </header>
+  <div class="rationale">image: 命中 [0,10) 档：属于单卡玩具型工具（内存清理/日程提醒），仅一色彩环+默认胶囊按钮+大块空白，无导航/无产品体系/无状态设计；可见证据为82%环形、剩余3.2GB、已清理胶囊、右侧日程卡与绿色打开清理按钮，整体为默认控件拼合；未进 [10,20) 因为缺少筛选/列表/多控件等稳定页面结构，未达低模板门槛。</div>
+  
+<section class="view">
+  <div class="shot"><img src="file:///D:/code/A2UI/vlm/aesthetic-v4-vlm-judge-package-20260624/input/test_60/Case-06-memory-clean-001/card.dsl.png" alt="image screenshot" loading="lazy"></div>
+  <div class="view-body">
+    <h3>image <span>5.00/100</span></h3>
+    <table class="axis"><tbody><tr><th>视觉冲击 / 原创性</th><td>0.3</td></tr><tr><th>构图层级</th><td>0.5</td></tr><tr><th>字体表现</th><td>0.2</td></tr><tr><th>色彩与材质</th><td>0.7</td></tr><tr><th>细节完成度</th><td>0.0</td></tr><tr><th>基础可用性</th><td>0.7</td></tr></tbody></table>
+    <div class="occ ok">occlusion_overlap_check: always_on · no finding</div>
+    <p>命中 [0,10) 档：属于单卡玩具型工具（内存清理/日程提醒），仅一色彩环+默认胶囊按钮+大块空白，无导航/无产品体系/无状态设计；可见证据为82%环形、剩余3.2GB、已清理胶囊、右侧日程卡与绿色打开清理按钮，整体为默认控件拼合；未进 [10,20) 因为缺少筛选/列表/多控件等稳定页面结构，未达低模板门槛。</p>
+    
+  </div>
+</section>
+
+</article>
+
+<article class="card" data-bucket="[20,30)" data-status="scored">
+  <header>
+    <div>
+      <h2>card_dsl_e9a646e14b</h2>
+      <p>Case-06-memory-clean-006/card.dsl.png</p>
+    </div>
+    <div class="score"><b>25.00</b><span>/100</span><em>[20,30)</em></div>
+  </header>
+  <div class="rationale">image: 命中 [20,30) 档：属于单卡工具型应用（缓存清理），深蓝紫渐变背景配绿色强调色，圆形进度环显示 1.8G 统计，三项 checklist 与绿色 CTA 按钮构成完整视觉系统。视觉处理比 [10,20) 默认表单更有设计感，控制集更丰富，但仍是单卡工具，产品深度与品牌辨识度有限，未达 [30,40) 的多模块产品级 UI。</div>
+  
+<section class="view">
+  <div class="shot"><img src="file:///D:/code/A2UI/vlm/aesthetic-v4-vlm-judge-package-20260624/input/test_60/Case-06-memory-clean-006/card.dsl.png" alt="image screenshot" loading="lazy"></div>
+  <div class="view-body">
+    <h3>image <span>25.00/100</span></h3>
+    <table class="axis"><tbody><tr><th>视觉冲击 / 原创性</th><td>2.1</td></tr><tr><th>构图层级</th><td>2.0</td></tr><tr><th>字体表现</th><td>1.8</td></tr><tr><th>色彩与材质</th><td>2.3</td></tr><tr><th>细节完成度</th><td>1.7</td></tr><tr><th>基础可用性</th><td>2.3</td></tr></tbody></table>
+    <div class="occ ok">occlusion_overlap_check: always_on · no finding</div>
+    <p>命中 [20,30) 档：属于单卡工具型应用（缓存清理），深蓝紫渐变背景配绿色强调色，圆形进度环显示 1.8G 统计，三项 checklist 与绿色 CTA 按钮构成完整视觉系统。视觉处理比 [10,20) 默认表单更有设计感，控制集更丰富，但仍是单卡工具，产品深度与品牌辨识度有限，未达 [30,40) 的多模块产品级 UI。</p>
+    
+  </div>
+</section>
+
+</article>
+
+<article class="card" data-bucket="[0,10)" data-status="scored">
+  <header>
+    <div>
+      <h2>card_dsl_35454cec1f</h2>
+      <p>Case-07-sports-event-001/card.dsl.png</p>
+    </div>
+    <div class="score"><b>5.00</b><span>/100</span><em>[0,10)</em></div>
+  </header>
+  <div class="rationale">image: 命中 [0,10) 档：属于单卡玩具式状态显示（冲刺赛87分+红色警告按钮）；可见证据是仅一个小跑者图标、一个巨大红色数字、一个灰色标签和一个圆角红按钮，无输入、无列表、无导航、无视觉系统；未进 [10,20) 因内容极薄，不构成多控件模板页面。</div>
+  
+<section class="view">
+  <div class="shot"><img src="file:///D:/code/A2UI/vlm/aesthetic-v4-vlm-judge-package-20260624/input/test_60/Case-07-sports-event-001/card.dsl.png" alt="image screenshot" loading="lazy"></div>
+  <div class="view-body">
+    <h3>image <span>5.00/100</span></h3>
+    <table class="axis"><tbody><tr><th>视觉冲击 / 原创性</th><td>0.5</td></tr><tr><th>构图层级</th><td>0.4</td></tr><tr><th>字体表现</th><td>0.2</td></tr><tr><th>色彩与材质</th><td>0.7</td></tr><tr><th>细节完成度</th><td>0.1</td></tr><tr><th>基础可用性</th><td>0.7</td></tr></tbody></table>
+    <div class="occ ok">occlusion_overlap_check: always_on · no finding</div>
+    <p>命中 [0,10) 档：属于单卡玩具式状态显示（冲刺赛87分+红色警告按钮）；可见证据是仅一个小跑者图标、一个巨大红色数字、一个灰色标签和一个圆角红按钮，无输入、无列表、无导航、无视觉系统；未进 [10,20) 因内容极薄，不构成多控件模板页面。</p>
+    
+  </div>
+</section>
+
+</article>
+
+<article class="card" data-bucket="[10,20)" data-status="scored">
+  <header>
+    <div>
+      <h2>card_dsl_24d8eac353</h2>
+      <p>Case-07-sports-event-006/card.dsl.png</p>
+    </div>
+    <div class="score"><b>15.00</b><span>/100</span><em>[10,20)</em></div>
+  </header>
+  <div class="rationale">image: 命中 [10,20) 档：属于低质量双卡信息小部件，左卡倒计时+右卡天气，仅两块默认白卡加红/蓝按钮的极简模板。视觉系统缺失、无品牌识别、空白占比大。未进 [20,30) 因为没有完整业务流（无列表/筛选/多步骤），仅是两块静态信息卡加动作按钮。</div>
+  
+<section class="view">
+  <div class="shot"><img src="file:///D:/code/A2UI/vlm/aesthetic-v4-vlm-judge-package-20260624/input/test_60/Case-07-sports-event-006/card.dsl.png" alt="image screenshot" loading="lazy"></div>
+  <div class="view-body">
+    <h3>image <span>15.00/100</span></h3>
+    <table class="axis"><tbody><tr><th>视觉冲击 / 原创性</th><td>1.3</td></tr><tr><th>构图层级</th><td>1.2</td></tr><tr><th>字体表现</th><td>1.0</td></tr><tr><th>色彩与材质</th><td>1.3</td></tr><tr><th>细节完成度</th><td>0.9</td></tr><tr><th>基础可用性</th><td>1.5</td></tr></tbody></table>
+    <div class="occ ok">occlusion_overlap_check: always_on · no finding</div>
+    <p>命中 [10,20) 档：属于低质量双卡信息小部件，左卡倒计时+右卡天气，仅两块默认白卡加红/蓝按钮的极简模板。视觉系统缺失、无品牌识别、空白占比大。未进 [20,30) 因为没有完整业务流（无列表/筛选/多步骤），仅是两块静态信息卡加动作按钮。</p>
+    
+  </div>
+</section>
+
+</article>
+
+<article class="card" data-bucket="[40,50)" data-status="scored">
+  <header>
+    <div>
+      <h2>card_dsl_d0c22d5c58</h2>
+      <p>Case-08-sleep-001/card.dsl.png</p>
+    </div>
+    <div class="score"><b>45.00</b><span>/100</span><em>[40,50)</em></div>
+  </header>
+  <div class="rationale">image: 命中 [40,50) 档：属于深色数据卡片/小组件类型；可见证据为深色背景配紫红渐变柱图、7h32m主读数、均值/环比次级信息、日程次卡与详情CTA，版式整洁。但属于单卡片widget，信息深度有限、视觉系统偏常见，未达 [50,60) 的多模块深色专业仪表盘水平。</div>
+  
+<section class="view">
+  <div class="shot"><img src="file:///D:/code/A2UI/vlm/aesthetic-v4-vlm-judge-package-20260624/input/test_60/Case-08-sleep-001/card.dsl.png" alt="image screenshot" loading="lazy"></div>
+  <div class="view-body">
+    <h3>image <span>45.00/100</span></h3>
+    <table class="axis"><tbody><tr><th>视觉冲击 / 原创性</th><td>3.7</td></tr><tr><th>构图层级</th><td>3.7</td></tr><tr><th>字体表现</th><td>3.4</td></tr><tr><th>色彩与材质</th><td>3.9</td></tr><tr><th>细节完成度</th><td>3.0</td></tr><tr><th>基础可用性</th><td>3.9</td></tr></tbody></table>
+    <div class="occ ok">occlusion_overlap_check: always_on · no finding</div>
+    <p>命中 [40,50) 档：属于深色数据卡片/小组件类型；可见证据为深色背景配紫红渐变柱图、7h32m主读数、均值/环比次级信息、日程次卡与详情CTA，版式整洁。但属于单卡片widget，信息深度有限、视觉系统偏常见，未达 [50,60) 的多模块深色专业仪表盘水平。</p>
+    
+  </div>
+</section>
+
+</article>
+
+<article class="card" data-bucket="[40,50)" data-status="scored">
+  <header>
+    <div>
+      <h2>card_dsl_e5d993b478</h2>
+      <p>Case-08-sleep-006/card.dsl.png</p>
+    </div>
+    <div class="score"><b>45.00</b><span>/100</span><em>[40,50)</em></div>
+  </header>
+  <div class="rationale">image: 命中[40,50)档：属于单卡片睡眠监测主题面板；可见证据是深蓝紫渐变背景、紫色进度环、1h42m深睡读数、天气信息分区、红色危险告警条，场景设计完整有主题感。未进[50,60)因为仅为单卡片widget，无多面板/多模块健康控制中心深度，组件语言偏简洁。</div>
+  
+<section class="view">
+  <div class="shot"><img src="file:///D:/code/A2UI/vlm/aesthetic-v4-vlm-judge-package-20260624/input/test_60/Case-08-sleep-006/card.dsl.png" alt="image screenshot" loading="lazy"></div>
+  <div class="view-body">
+    <h3>image <span>45.00/100</span></h3>
+    <table class="axis"><tbody><tr><th>视觉冲击 / 原创性</th><td>3.9</td></tr><tr><th>构图层级</th><td>3.6</td></tr><tr><th>字体表现</th><td>3.3</td></tr><tr><th>色彩与材质</th><td>3.8</td></tr><tr><th>细节完成度</th><td>3.1</td></tr><tr><th>基础可用性</th><td>3.8</td></tr></tbody></table>
+    <div class="occ ok">occlusion_overlap_check: always_on · no finding</div>
+    <p>命中[40,50)档：属于单卡片睡眠监测主题面板；可见证据是深蓝紫渐变背景、紫色进度环、1h42m深睡读数、天气信息分区、红色危险告警条，场景设计完整有主题感。未进[50,60)因为仅为单卡片widget，无多面板/多模块健康控制中心深度，组件语言偏简洁。</p>
+    
+  </div>
+</section>
+
+</article>
+
+<article class="card" data-bucket="[10,20)" data-status="scored">
+  <header>
+    <div>
+      <h2>card_dsl_a2c976902c</h2>
+      <p>Case-09-weather-care-001/card.dsl.png</p>
+    </div>
+    <div class="score"><b>15.00</b><span>/100</span><em>[10,20)</em></div>
+  </header>
+  <div class="rationale">image: 命中 [10,20) 档：属于简易天气预警 widget 组件视图，仅两张并排卡片（红色高温预警 + 当前位置信息）和一个 CTA 按钮，控件为默认圆角样式，缺少导航、图表、列表等结构深度；颜色虽用粉红做强调但整体单薄，类型层级基础。未进 [20,30) 因内容仅为单条预警+单组读数，工作流极简；未进 [0,10) 因有两张结构化卡片与一个明确按钮，非纯空白 toy。</div>
+  
+<section class="view">
+  <div class="shot"><img src="file:///D:/code/A2UI/vlm/aesthetic-v4-vlm-judge-package-20260624/input/test_60/Case-09-weather-care-001/card.dsl.png" alt="image screenshot" loading="lazy"></div>
+  <div class="view-body">
+    <h3>image <span>15.00/100</span></h3>
+    <table class="axis"><tbody><tr><th>视觉冲击 / 原创性</th><td>1.2</td></tr><tr><th>构图层级</th><td>1.4</td></tr><tr><th>字体表现</th><td>1.1</td></tr><tr><th>色彩与材质</th><td>1.6</td></tr><tr><th>细节完成度</th><td>0.7</td></tr><tr><th>基础可用性</th><td>1.6</td></tr></tbody></table>
+    <div class="occ ok">occlusion_overlap_check: always_on · no finding</div>
+    <p>命中 [10,20) 档：属于简易天气预警 widget 组件视图，仅两张并排卡片（红色高温预警 + 当前位置信息）和一个 CTA 按钮，控件为默认圆角样式，缺少导航、图表、列表等结构深度；颜色虽用粉红做强调但整体单薄，类型层级基础。未进 [20,30) 因内容仅为单条预警+单组读数，工作流极简；未进 [0,10) 因有两张结构化卡片与一个明确按钮，非纯空白 toy。</p>
+    
+  </div>
+</section>
+
+</article>
+
+<article class="card" data-bucket="[20,30)" data-status="scored">
+  <header>
+    <div>
+      <h2>card_dsl_a2f4d37642</h2>
+      <p>Case-09-weather-care-006/card.dsl.png</p>
+    </div>
+    <div class="score"><b>25.00</b><span>/100</span><em>[20,30)</em></div>
+  </header>
+  <div class="rationale">image: 命中 [20,30) 档：属于单卡天气widget类型；可见证据为蓝绿渐变背景、36°C大数字、多云状态、橙色高温预警、蓝色打开按钮，整体视觉处理有意图。未进 [30,40) 因为仅一张卡，缺少多模块布局、图表、列表等结构深度；无遮挡缺陷。</div>
+  
+<section class="view">
+  <div class="shot"><img src="file:///D:/code/A2UI/vlm/aesthetic-v4-vlm-judge-package-20260624/input/test_60/Case-09-weather-care-006/card.dsl.png" alt="image screenshot" loading="lazy"></div>
+  <div class="view-body">
+    <h3>image <span>25.00/100</span></h3>
+    <table class="axis"><tbody><tr><th>视觉冲击 / 原创性</th><td>2.3</td></tr><tr><th>构图层级</th><td>1.7</td></tr><tr><th>字体表现</th><td>1.7</td></tr><tr><th>色彩与材质</th><td>2.2</td></tr><tr><th>细节完成度</th><td>1.8</td></tr><tr><th>基础可用性</th><td>1.6</td></tr></tbody></table>
+    <div class="occ ok">occlusion_overlap_check: always_on · no finding</div>
+    <p>命中 [20,30) 档：属于单卡天气widget类型；可见证据为蓝绿渐变背景、36°C大数字、多云状态、橙色高温预警、蓝色打开按钮，整体视觉处理有意图。未进 [30,40) 因为仅一张卡，缺少多模块布局、图表、列表等结构深度；无遮挡缺陷。</p>
+    
+  </div>
+</section>
+
+</article>
+
+<article class="card" data-bucket="[0,10)" data-status="scored">
+  <header>
+    <div>
+      <h2>card_dsl_baef862b9e</h2>
+      <p>Case-10-rainy-taxi-001/card.dsl.png</p>
+    </div>
+    <div class="score"><b>5.00</b><span>/100</span><em>[0,10)</em></div>
+  </header>
+  <div class="rationale">image: 命中 [0,10) 档：属于极简天气通知卡片类；可见证据为单一浅蓝底卡片、emoji云图标、系统级圆角按钮、默认无衬线字体的23°C数字与&#x27;打开&#x27;按钮，缺少品牌系统、版式层级、材质细节和任何视觉深度；未进 [10,20) 因仅有一个静态天气读数加两个按钮，无任何表单、列表、筛选或内容区块，属于&#x27;bare toy utility&#x27;原型的最低档。</div>
+  
+<section class="view">
+  <div class="shot"><img src="file:///D:/code/A2UI/vlm/aesthetic-v4-vlm-judge-package-20260624/input/test_60/Case-10-rainy-taxi-001/card.dsl.png" alt="image screenshot" loading="lazy"></div>
+  <div class="view-body">
+    <h3>image <span>5.00/100</span></h3>
+    <table class="axis"><tbody><tr><th>视觉冲击 / 原创性</th><td>0.5</td></tr><tr><th>构图层级</th><td>0.5</td></tr><tr><th>字体表现</th><td>0.0</td></tr><tr><th>色彩与材质</th><td>0.7</td></tr><tr><th>细节完成度</th><td>0.0</td></tr><tr><th>基础可用性</th><td>0.7</td></tr></tbody></table>
+    <div class="occ ok">occlusion_overlap_check: always_on · no finding</div>
+    <p>命中 [0,10) 档：属于极简天气通知卡片类；可见证据为单一浅蓝底卡片、emoji云图标、系统级圆角按钮、默认无衬线字体的23°C数字与&#x27;打开&#x27;按钮，缺少品牌系统、版式层级、材质细节和任何视觉深度；未进 [10,20) 因仅有一个静态天气读数加两个按钮，无任何表单、列表、筛选或内容区块，属于&#x27;bare toy utility&#x27;原型的最低档。</p>
+    
+  </div>
+</section>
+
+</article>
+
+<article class="card" data-bucket="[0,10)" data-status="scored">
+  <header>
+    <div>
+      <h2>card_dsl_3b74ca2253</h2>
+      <p>Case-10-rainy-taxi-006/card.dsl.png</p>
+    </div>
+    <div class="score"><b>5.00</b><span>/100</span><em>[0,10)</em></div>
+  </header>
+  <div class="rationale">image: 命中 [0,10) 档：属于单卡快捷打车瓦片，对应 blank gradient single-action panel 原型；可见证据是单一蓝紫渐变卡片、一个车标、标题&#x27;机场接人&#x27;、时间地点&#x27;18:30/T3航站楼&#x27;、一个&#x27;点按打开打车&#x27;按钮，无导航无列表无产品深度；未进 [10,20) 因为仅一张单动作卡片、无多控件或多区块，命中 v26 单动作空白渐变面板的 [0,10) 规则。</div>
+  
+<section class="view">
+  <div class="shot"><img src="file:///D:/code/A2UI/vlm/aesthetic-v4-vlm-judge-package-20260624/input/test_60/Case-10-rainy-taxi-006/card.dsl.png" alt="image screenshot" loading="lazy"></div>
+  <div class="view-body">
+    <h3>image <span>5.00/100</span></h3>
+    <table class="axis"><tbody><tr><th>视觉冲击 / 原创性</th><td>0.5</td></tr><tr><th>构图层级</th><td>0.4</td></tr><tr><th>字体表现</th><td>0.0</td></tr><tr><th>色彩与材质</th><td>0.6</td></tr><tr><th>细节完成度</th><td>0.2</td></tr><tr><th>基础可用性</th><td>0.6</td></tr></tbody></table>
+    <div class="occ ok">occlusion_overlap_check: always_on · no finding</div>
+    <p>命中 [0,10) 档：属于单卡快捷打车瓦片，对应 blank gradient single-action panel 原型；可见证据是单一蓝紫渐变卡片、一个车标、标题&#x27;机场接人&#x27;、时间地点&#x27;18:30/T3航站楼&#x27;、一个&#x27;点按打开打车&#x27;按钮，无导航无列表无产品深度；未进 [10,20) 因为仅一张单动作卡片、无多控件或多区块，命中 v26 单动作空白渐变面板的 [0,10) 规则。</p>
+    
+  </div>
+</section>
+
+</article>
+
+<article class="card" data-bucket="[0,10)" data-status="scored">
+  <header>
+    <div>
+      <h2>card_dsl_e1d9186f58</h2>
+      <p>Case-11-fitness-001/card.dsl.png</p>
+    </div>
+    <div class="score"><b>5.00</b><span>/100</span><em>[0,10)</em></div>
+  </header>
+  <div class="rationale">image: 命中 [0,10) 档：属于单用途运动记录小工具，可见证据是橙底圆角药丸式数据条、默认开始按钮、单一开始动作、无导航无图表无状态切换；未进 [10,20) 因为只有预填示例数据、缺乏真实控件组合与状态层级，不构成低模板。</div>
+  
+<section class="view">
+  <div class="shot"><img src="file:///D:/code/A2UI/vlm/aesthetic-v4-vlm-judge-package-20260624/input/test_60/Case-11-fitness-001/card.dsl.png" alt="image screenshot" loading="lazy"></div>
+  <div class="view-body">
+    <h3>image <span>5.00/100</span></h3>
+    <table class="axis"><tbody><tr><th>视觉冲击 / 原创性</th><td>0.4</td></tr><tr><th>构图层级</th><td>0.6</td></tr><tr><th>字体表现</th><td>0.3</td></tr><tr><th>色彩与材质</th><td>0.6</td></tr><tr><th>细节完成度</th><td>0.2</td></tr><tr><th>基础可用性</th><td>0.8</td></tr></tbody></table>
+    <div class="occ ok">occlusion_overlap_check: always_on · no finding</div>
+    <p>命中 [0,10) 档：属于单用途运动记录小工具，可见证据是橙底圆角药丸式数据条、默认开始按钮、单一开始动作、无导航无图表无状态切换；未进 [10,20) 因为只有预填示例数据、缺乏真实控件组合与状态层级，不构成低模板。</p>
+    
+  </div>
+</section>
+
+</article>
+
+<article class="card" data-bucket="[20,30)" data-status="scored">
+  <header>
+    <div>
+      <h2>card_dsl_36961a2f40</h2>
+      <p>Case-11-fitness-006/card.dsl.png</p>
+    </div>
+    <div class="score"><b>25.00</b><span>/100</span><em>[20,30)</em></div>
+  </header>
+  <div class="rationale">image: 命中[20,30)档：属于彩色单卡健身日历小部件；可见证据为橙色彩环+82分数+危险徽章+时间/活动/负荷状态文本+单个锻炼按钮，配色有意识但内容仅一卡一信息；未进[30,40)因为无列表/多区块/筛选/历史等结构，仅一个孤立卡片与单按钮，视觉系统尚未成形。</div>
+  
+<section class="view">
+  <div class="shot"><img src="file:///D:/code/A2UI/vlm/aesthetic-v4-vlm-judge-package-20260624/input/test_60/Case-11-fitness-006/card.dsl.png" alt="image screenshot" loading="lazy"></div>
+  <div class="view-body">
+    <h3>image <span>25.00/100</span></h3>
+    <table class="axis"><tbody><tr><th>视觉冲击 / 原创性</th><td>2.2</td></tr><tr><th>构图层级</th><td>1.9</td></tr><tr><th>字体表现</th><td>1.6</td></tr><tr><th>色彩与材质</th><td>2.1</td></tr><tr><th>细节完成度</th><td>1.7</td></tr><tr><th>基础可用性</th><td>2.1</td></tr></tbody></table>
+    <div class="occ ok">occlusion_overlap_check: always_on · no finding</div>
+    <p>命中[20,30)档：属于彩色单卡健身日历小部件；可见证据为橙色彩环+82分数+危险徽章+时间/活动/负荷状态文本+单个锻炼按钮，配色有意识但内容仅一卡一信息；未进[30,40)因为无列表/多区块/筛选/历史等结构，仅一个孤立卡片与单按钮，视觉系统尚未成形。</p>
+    
+  </div>
+</section>
+
+</article>
+
+<article class="card" data-bucket="[40,50)" data-status="scored">
+  <header>
+    <div>
+      <h2>card_dsl_5345cf1738</h2>
+      <p>Case-12-finance-001/card.dsl.png</p>
+    </div>
+    <div class="score"><b>43.75</b><span>/100</span><em>[40,50)</em></div>
+  </header>
+  <div class="rationale">image: score_only</div>
+  
+<section class="view">
+  <div class="shot"><img src="file:///D:/code/A2UI/vlm/aesthetic-v4-vlm-judge-package-20260624/input/test_60/Case-12-finance-001/card.dsl.png" alt="image screenshot" loading="lazy"></div>
+  <div class="view-body">
+    <h3>image <span>43.75/100</span></h3>
+    <table class="axis"><tbody><tr><th>视觉冲击 / 原创性</th><td>3.5</td></tr><tr><th>构图层级</th><td>3.5</td></tr><tr><th>字体表现</th><td>3.5</td></tr><tr><th>色彩与材质</th><td>3.5</td></tr><tr><th>细节完成度</th><td>3.5</td></tr><tr><th>基础可用性</th><td>3.5</td></tr></tbody></table>
+    <div class="occ ok">occlusion_overlap_check: always_on · no finding</div>
+    <p>score_only</p>
+    
+  </div>
+</section>
+
+</article>
+
+<article class="card" data-bucket="failed" data-status="failed">
+  <header>
+    <div>
+      <h2>card_dsl_71b67a8c0c</h2>
+      <p>Case-12-finance-006/card.dsl.png</p>
+    </div>
+    <div class="score"><b>N/A</b><span>/100</span><em>failed</em></div>
+  </header>
+  <div class="rationale">No score rationale available.</div>
+  
+</article>
+
+<article class="card" data-bucket="[0,10)" data-status="scored">
+  <header>
+    <div>
+      <h2>card_dsl_d21499a479</h2>
+      <p>Case-13-health-reminder-001/card.dsl.png</p>
+    </div>
+    <div class="score"><b>5.00</b><span>/100</span><em>[0,10)</em></div>
+  </header>
+  <div class="rationale">image: 命中 [0,10) 档：属于极简用药提醒通知/横幅卡片；可见证据为橙色背景、黑色闹钟图标、白色圆角卡、两行中文标题与一个红色胶囊按钮、一个米色胶囊副按钮，无输入、无列表、无层级细节；排版为默认系统字重，未进更高档因为缺乏视觉系统、组件语言与任何品牌深度，属于裸工具卡片。</div>
+  
+<section class="view">
+  <div class="shot"><img src="file:///D:/code/A2UI/vlm/aesthetic-v4-vlm-judge-package-20260624/input/test_60/Case-13-health-reminder-001/card.dsl.png" alt="image screenshot" loading="lazy"></div>
+  <div class="view-body">
+    <h3>image <span>5.00/100</span></h3>
+    <table class="axis"><tbody><tr><th>视觉冲击 / 原创性</th><td>0.5</td></tr><tr><th>构图层级</th><td>0.5</td></tr><tr><th>字体表现</th><td>0.0</td></tr><tr><th>色彩与材质</th><td>0.7</td></tr><tr><th>细节完成度</th><td>0.0</td></tr><tr><th>基础可用性</th><td>0.7</td></tr></tbody></table>
+    <div class="occ ok">occlusion_overlap_check: always_on · no finding</div>
+    <p>命中 [0,10) 档：属于极简用药提醒通知/横幅卡片；可见证据为橙色背景、黑色闹钟图标、白色圆角卡、两行中文标题与一个红色胶囊按钮、一个米色胶囊副按钮，无输入、无列表、无层级细节；排版为默认系统字重，未进更高档因为缺乏视觉系统、组件语言与任何品牌深度，属于裸工具卡片。</p>
+    
+  </div>
+</section>
+
+</article>
+
+<article class="card" data-bucket="[0,10)" data-status="scored">
+  <header>
+    <div>
+      <h2>card_dsl_ce4b74a372</h2>
+      <p>Case-13-health-reminder-006/card.dsl.png</p>
+    </div>
+    <div class="score"><b>5.00</b><span>/100</span><em>[0,10)</em></div>
+  </header>
+  <div class="rationale">image: 命中 [0,10) 档：属于吃药喝水提醒类单卡玩具；可见证据是顶部时钟图标配吃药喝水文字与紧急橙徽标、中部白卡显示立即吃药与08:00喝水、底部单一橙色进入日历按钮；控件极少、视觉系统简陋、字体默认、无品牌识别与产品深度；未进 [10,20) 因缺少多次输入与列表区，整体为一卡一按钮的极简工具，无遮挡缺陷。</div>
+  
+<section class="view">
+  <div class="shot"><img src="file:///D:/code/A2UI/vlm/aesthetic-v4-vlm-judge-package-20260624/input/test_60/Case-13-health-reminder-006/card.dsl.png" alt="image screenshot" loading="lazy"></div>
+  <div class="view-body">
+    <h3>image <span>5.00/100</span></h3>
+    <table class="axis"><tbody><tr><th>视觉冲击 / 原创性</th><td>0.6</td></tr><tr><th>构图层级</th><td>0.2</td></tr><tr><th>字体表现</th><td>0.1</td></tr><tr><th>色彩与材质</th><td>0.8</td></tr><tr><th>细节完成度</th><td>0.2</td></tr><tr><th>基础可用性</th><td>0.2</td></tr></tbody></table>
+    <div class="occ ok">occlusion_overlap_check: always_on · no finding</div>
+    <p>命中 [0,10) 档：属于吃药喝水提醒类单卡玩具；可见证据是顶部时钟图标配吃药喝水文字与紧急橙徽标、中部白卡显示立即吃药与08:00喝水、底部单一橙色进入日历按钮；控件极少、视觉系统简陋、字体默认、无品牌识别与产品深度；未进 [10,20) 因缺少多次输入与列表区，整体为一卡一按钮的极简工具，无遮挡缺陷。</p>
+    
+  </div>
+</section>
+
+</article>
+
+<article class="card" data-bucket="[0,10)" data-status="scored">
+  <header>
+    <div>
+      <h2>card_dsl_5b6f41e109</h2>
+      <p>Case-14-commute-001/card.dsl.png</p>
+    </div>
+    <div class="score"><b>5.00</b><span>/100</span><em>[0,10)</em></div>
+  </header>
+  <div class="rationale">image: 命中 [0,10) 档：属于极简天气/应急工具卡片，仅有系统emoji天气图标、29℃大字与空气/风力文字，右侧为默认灰色电话图标、绿色拨打电话按钮与橙色预警横幅，无图片、无图表、无品牌系统、空白占比大。未进 [10,20) 因为缺乏筛选/列表/多控件、模板结构感，单卡仅展示只读信息加两个动作，无页面级导航或卡片组。</div>
+  
+<section class="view">
+  <div class="shot"><img src="file:///D:/code/A2UI/vlm/aesthetic-v4-vlm-judge-package-20260624/input/test_60/Case-14-commute-001/card.dsl.png" alt="image screenshot" loading="lazy"></div>
+  <div class="view-body">
+    <h3>image <span>5.00/100</span></h3>
+    <table class="axis"><tbody><tr><th>视觉冲击 / 原创性</th><td>0.5</td></tr><tr><th>构图层级</th><td>0.5</td></tr><tr><th>字体表现</th><td>0.0</td></tr><tr><th>色彩与材质</th><td>0.7</td></tr><tr><th>细节完成度</th><td>0.1</td></tr><tr><th>基础可用性</th><td>0.7</td></tr></tbody></table>
+    <div class="occ ok">occlusion_overlap_check: always_on · no finding</div>
+    <p>命中 [0,10) 档：属于极简天气/应急工具卡片，仅有系统emoji天气图标、29℃大字与空气/风力文字，右侧为默认灰色电话图标、绿色拨打电话按钮与橙色预警横幅，无图片、无图表、无品牌系统、空白占比大。未进 [10,20) 因为缺乏筛选/列表/多控件、模板结构感，单卡仅展示只读信息加两个动作，无页面级导航或卡片组。</p>
+    
+  </div>
+</section>
+
+</article>
+
+<article class="card" data-bucket="[20,30)" data-status="scored">
+  <header>
+    <div>
+      <h2>card_dsl_d6b145b12a</h2>
+      <p>Case-14-commute-006/card.dsl.png</p>
+    </div>
+    <div class="score"><b>25.00</b><span>/100</span><em>[20,30)</em></div>
+  </header>
+  <div class="rationale">image: 命中 [20,30) 档：属于彩色单卡通勤提醒 widget 类型；可见证据为暖色渐变背景、白色信息卡片、&#x27;快出发&#x27;大标题、地铁优先/34 分钟/还剩 8 分钟信息块、蓝色打开App 按钮，视觉处理较有意图但内容深度不足。未进 [30,40) 因为仅单一卡片、无数列表与多区结构、无品牌系统与组件深度，属低但完整的轻量工具。</div>
+  
+<section class="view">
+  <div class="shot"><img src="file:///D:/code/A2UI/vlm/aesthetic-v4-vlm-judge-package-20260624/input/test_60/Case-14-commute-006/card.dsl.png" alt="image screenshot" loading="lazy"></div>
+  <div class="view-body">
+    <h3>image <span>25.00/100</span></h3>
+    <table class="axis"><tbody><tr><th>视觉冲击 / 原创性</th><td>2.3</td></tr><tr><th>构图层级</th><td>2.0</td></tr><tr><th>字体表现</th><td>1.4</td></tr><tr><th>色彩与材质</th><td>2.2</td></tr><tr><th>细节完成度</th><td>1.5</td></tr><tr><th>基础可用性</th><td>2.2</td></tr></tbody></table>
+    <div class="occ ok">occlusion_overlap_check: always_on · no finding</div>
+    <p>命中 [20,30) 档：属于彩色单卡通勤提醒 widget 类型；可见证据为暖色渐变背景、白色信息卡片、&#x27;快出发&#x27;大标题、地铁优先/34 分钟/还剩 8 分钟信息块、蓝色打开App 按钮，视觉处理较有意图但内容深度不足。未进 [30,40) 因为仅单一卡片、无数列表与多区结构、无品牌系统与组件深度，属低但完整的轻量工具。</p>
+    
+  </div>
+</section>
+
+</article>
+
+<article class="card" data-bucket="[0,10)" data-status="scored">
+  <header>
+    <div>
+      <h2>card_dsl_802eab92f6</h2>
+      <p>Case-15-smart-home-001/card.dsl.png</p>
+    </div>
+    <div class="score"><b>5.00</b><span>/100</span><em>[0,10)</em></div>
+  </header>
+  <div class="rationale">image: 命中 [0,10) 档：属于极简智能家居小部件/玩具型工具；可见证据是浅薄荷渐变背景、单个黑色房屋图标、一个大号数字&quot;6&quot;、两个简短文字标签和一个默认绿色胶囊按钮，整体四个元素、大量留白、无任何图表/列表/深度信息、未形成真实视觉系统；未进 [10,20) 因为控件极少且仅一两个默认按钮、缺乏稳定页头与多控件表单，不构成低模板门槛。</div>
+  
+<section class="view">
+  <div class="shot"><img src="file:///D:/code/A2UI/vlm/aesthetic-v4-vlm-judge-package-20260624/input/test_60/Case-15-smart-home-001/card.dsl.png" alt="image screenshot" loading="lazy"></div>
+  <div class="view-body">
+    <h3>image <span>5.00/100</span></h3>
+    <table class="axis"><tbody><tr><th>视觉冲击 / 原创性</th><td>0.5</td></tr><tr><th>构图层级</th><td>0.5</td></tr><tr><th>字体表现</th><td>0.0</td></tr><tr><th>色彩与材质</th><td>0.7</td></tr><tr><th>细节完成度</th><td>0.1</td></tr><tr><th>基础可用性</th><td>0.7</td></tr></tbody></table>
+    <div class="occ warn">occlusion_overlap_check: always_on · affected axes 4</div><table class="occ-table"><tbody><tr><th>text_text</th><td>minor</td><td>数字6与台设备文字</td><td>大号6底部弧线与台设备文字顶部相距极近，存在轻微视觉拥挤</td></tr></tbody></table>
+    <p>命中 [0,10) 档：属于极简智能家居小部件/玩具型工具；可见证据是浅薄荷渐变背景、单个黑色房屋图标、一个大号数字&quot;6&quot;、两个简短文字标签和一个默认绿色胶囊按钮，整体四个元素、大量留白、无任何图表/列表/深度信息、未形成真实视觉系统；未进 [10,20) 因为控件极少且仅一两个默认按钮、缺乏稳定页头与多控件表单，不构成低模板门槛。</p>
+    
+  </div>
+</section>
+
+</article>
+
+<article class="card" data-bucket="[40,50)" data-status="scored">
+  <header>
+    <div>
+      <h2>card_dsl_c442bc39f7</h2>
+      <p>Case-15-smart-home-006/card.dsl.png</p>
+    </div>
+    <div class="score"><b>45.00</b><span>/100</span><em>[40,50)</em></div>
+  </header>
+  <div class="rationale">image: 命中 [40,50) 档：属于单卡片状态型仪表盘组件；可见证据是橙色环形进度图、报警徽标、72% 数值、超阈值高亮文案及查看按钮，版式与配色一致；未进更高档因为仅为单卡片局部，缺少完整页面层级与更丰富组件系统。</div>
+  
+<section class="view">
+  <div class="shot"><img src="file:///D:/code/A2UI/vlm/aesthetic-v4-vlm-judge-package-20260624/input/test_60/Case-15-smart-home-006/card.dsl.png" alt="image screenshot" loading="lazy"></div>
+  <div class="view-body">
+    <h3>image <span>45.00/100</span></h3>
+    <table class="axis"><tbody><tr><th>视觉冲击 / 原创性</th><td>3.8</td></tr><tr><th>构图层级</th><td>3.7</td></tr><tr><th>字体表现</th><td>3.4</td></tr><tr><th>色彩与材质</th><td>3.9</td></tr><tr><th>细节完成度</th><td>3.2</td></tr><tr><th>基础可用性</th><td>3.9</td></tr></tbody></table>
+    <div class="occ ok">occlusion_overlap_check: always_on · no finding</div>
+    <p>命中 [40,50) 档：属于单卡片状态型仪表盘组件；可见证据是橙色环形进度图、报警徽标、72% 数值、超阈值高亮文案及查看按钮，版式与配色一致；未进更高档因为仅为单卡片局部，缺少完整页面层级与更丰富组件系统。</p>
+    
+  </div>
+</section>
+
+</article>
+
+<article class="card" data-bucket="[20,30)" data-status="scored">
+  <header>
+    <div>
+      <h2>card_dsl_4bf61b2394</h2>
+      <p>Case-16-travel-ticket-001/card.dsl.png</p>
+    </div>
+    <div class="score"><b>25.00</b><span>/100</span><em>[20,30)</em></div>
+  </header>
+  <div class="rationale">image: 命中 [20,30) 档：属于彩色单卡天气/出行小工具类型；可见证据是青蓝渐变背景、表情符号天气图、大号 29° 数字、红色预警提示卡和单个去机场 CTA；视觉处理有一定意图（渐变、圆角、色彩层级），高于 [0,10) 极简玩具；未进 [30,40) 因为仍是单卡薄内容、缺乏多区块、列表或品牌系统。</div>
+  
+<section class="view">
+  <div class="shot"><img src="file:///D:/code/A2UI/vlm/aesthetic-v4-vlm-judge-package-20260624/input/test_60/Case-16-travel-ticket-001/card.dsl.png" alt="image screenshot" loading="lazy"></div>
+  <div class="view-body">
+    <h3>image <span>25.00/100</span></h3>
+    <table class="axis"><tbody><tr><th>视觉冲击 / 原创性</th><td>2.2</td></tr><tr><th>构图层级</th><td>1.9</td></tr><tr><th>字体表现</th><td>1.6</td></tr><tr><th>色彩与材质</th><td>2.1</td></tr><tr><th>细节完成度</th><td>1.7</td></tr><tr><th>基础可用性</th><td>2.1</td></tr></tbody></table>
+    <div class="occ ok">occlusion_overlap_check: always_on · no finding</div>
+    <p>命中 [20,30) 档：属于彩色单卡天气/出行小工具类型；可见证据是青蓝渐变背景、表情符号天气图、大号 29° 数字、红色预警提示卡和单个去机场 CTA；视觉处理有一定意图（渐变、圆角、色彩层级），高于 [0,10) 极简玩具；未进 [30,40) 因为仍是单卡薄内容、缺乏多区块、列表或品牌系统。</p>
+    
+  </div>
+</section>
+
+</article>
+
+<article class="card" data-bucket="[10,20)" data-status="scored">
+  <header>
+    <div>
+      <h2>card_dsl_94b6d206bc</h2>
+      <p>Case-16-travel-ticket-006/card.dsl.png</p>
+    </div>
+    <div class="score"><b>15.00</b><span>/100</span><em>[10,20)</em></div>
+  </header>
+  <div class="rationale">image: 命中 [10,20) 档：属于单卡片航班信息控件，仅展示航班号、起降时间、登机口、座位与一个蓝色查看按钮。视觉上为浅蓝渐变背景配系统字体层级，缺乏品牌系统与视觉记忆点，飞机图标为通用线性图形。布局稳定但属默认模板壳，未达 [20,30) 所需的多模块结构与更明显主题表达。</div>
+  
+<section class="view">
+  <div class="shot"><img src="file:///D:/code/A2UI/vlm/aesthetic-v4-vlm-judge-package-20260624/input/test_60/Case-16-travel-ticket-006/card.dsl.png" alt="image screenshot" loading="lazy"></div>
+  <div class="view-body">
+    <h3>image <span>15.00/100</span></h3>
+    <table class="axis"><tbody><tr><th>视觉冲击 / 原创性</th><td>1.3</td></tr><tr><th>构图层级</th><td>1.3</td></tr><tr><th>字体表现</th><td>0.7</td></tr><tr><th>色彩与材质</th><td>1.5</td></tr><tr><th>细节完成度</th><td>0.9</td></tr><tr><th>基础可用性</th><td>1.5</td></tr></tbody></table>
+    <div class="occ ok">occlusion_overlap_check: always_on · no finding</div>
+    <p>命中 [10,20) 档：属于单卡片航班信息控件，仅展示航班号、起降时间、登机口、座位与一个蓝色查看按钮。视觉上为浅蓝渐变背景配系统字体层级，缺乏品牌系统与视觉记忆点，飞机图标为通用线性图形。布局稳定但属默认模板壳，未达 [20,30) 所需的多模块结构与更明显主题表达。</p>
+    
+  </div>
+</section>
+
+</article>
+
+<article class="card" data-bucket="[0,10)" data-status="scored">
+  <header>
+    <div>
+      <h2>card_dsl_d093bd70e5</h2>
+      <p>Case-17-queue-001/card.dsl.png</p>
+    </div>
+    <div class="score"><b>5.00</b><span>/100</span><em>[0,10)</em></div>
+  </header>
+  <div class="rationale">image: 命中 [0,10) 档：属于单卡片排队/叫号玩具型工具；可见证据为绿色渐变背景、一个白色环形进度圈配A28数字、右侧比例读数28/36、底部默认白色胶囊按钮&quot;进店查看&quot;，其余大面积空绿；中央图形配色鲜明但仍属单图默认组件，无视觉系统、层次、材质或品牌深度。未进 [10,20) 因该页只有一个卡片、一个按钮和大片空白，无顶部栏、列表行、筛选或多控件支撑的模板结构。</div>
+  
+<section class="view">
+  <div class="shot"><img src="file:///D:/code/A2UI/vlm/aesthetic-v4-vlm-judge-package-20260624/input/test_60/Case-17-queue-001/card.dsl.png" alt="image screenshot" loading="lazy"></div>
+  <div class="view-body">
+    <h3>image <span>5.00/100</span></h3>
+    <table class="axis"><tbody><tr><th>视觉冲击 / 原创性</th><td>0.5</td></tr><tr><th>构图层级</th><td>0.5</td></tr><tr><th>字体表现</th><td>0.2</td></tr><tr><th>色彩与材质</th><td>0.7</td></tr><tr><th>细节完成度</th><td>0.0</td></tr><tr><th>基础可用性</th><td>0.7</td></tr></tbody></table>
+    <div class="occ ok">occlusion_overlap_check: always_on · no finding</div>
+    <p>命中 [0,10) 档：属于单卡片排队/叫号玩具型工具；可见证据为绿色渐变背景、一个白色环形进度圈配A28数字、右侧比例读数28/36、底部默认白色胶囊按钮&quot;进店查看&quot;，其余大面积空绿；中央图形配色鲜明但仍属单图默认组件，无视觉系统、层次、材质或品牌深度。未进 [10,20) 因该页只有一个卡片、一个按钮和大片空白，无顶部栏、列表行、筛选或多控件支撑的模板结构。</p>
+    
+  </div>
+</section>
+
+</article>
+
+<article class="card" data-bucket="[0,10)" data-status="scored">
+  <header>
+    <div>
+      <h2>card_dsl_f35093809e</h2>
+      <p>Case-17-queue-006/card.dsl.png</p>
+    </div>
+    <div class="score"><b>5.00</b><span>/100</span><em>[0,10)</em></div>
+  </header>
+  <div class="rationale">image: 命中 [0,10) 档：属于单卡片玩具型工具（排队叫号提醒），仅含一个进度条图形、一行百分比读数、一个 CTA 按钮，无多控件、无列表、无品牌系统。视觉上仅深色渐变背景配红橙强调色，字体为默认系统字。未进 [10,20) 因为缺乏多控件/列表/分类等更完整结构，仅一个中心图形加一个按钮，属于最简单卡片 utility。</div>
+  
+<section class="view">
+  <div class="shot"><img src="file:///D:/code/A2UI/vlm/aesthetic-v4-vlm-judge-package-20260624/input/test_60/Case-17-queue-006/card.dsl.png" alt="image screenshot" loading="lazy"></div>
+  <div class="view-body">
+    <h3>image <span>5.00/100</span></h3>
+    <table class="axis"><tbody><tr><th>视觉冲击 / 原创性</th><td>0.5</td></tr><tr><th>构图层级</th><td>0.5</td></tr><tr><th>字体表现</th><td>0.0</td></tr><tr><th>色彩与材质</th><td>0.7</td></tr><tr><th>细节完成度</th><td>0.1</td></tr><tr><th>基础可用性</th><td>0.7</td></tr></tbody></table>
+    <div class="occ ok">occlusion_overlap_check: always_on · no finding</div>
+    <p>命中 [0,10) 档：属于单卡片玩具型工具（排队叫号提醒），仅含一个进度条图形、一行百分比读数、一个 CTA 按钮，无多控件、无列表、无品牌系统。视觉上仅深色渐变背景配红橙强调色，字体为默认系统字。未进 [10,20) 因为缺乏多控件/列表/分类等更完整结构，仅一个中心图形加一个按钮，属于最简单卡片 utility。</p>
+    
+  </div>
+</section>
+
+</article>
+
+<article class="card" data-bucket="[0,10)" data-status="scored">
+  <header>
+    <div>
+      <h2>card_dsl_c4688412ba</h2>
+      <p>Case-18-carpool-001/card.dsl.png</p>
+    </div>
+    <div class="score"><b>5.00</b><span>/100</span><em>[0,10)</em></div>
+  </header>
+  <div class="rationale">image: 命中 [0,10) 档：属于单卡片拼车状态微件/工具型页面；可见证据为一张橙黄渐变卡片、空白圆形头像、大号数字18、三行文字和一粒红色CTA按钮，整体系统默认字体、空白占位头像、大量留白、无列表或模块结构；未进 [10,20) 因为除渐变外缺乏第二个卡片、筛选chip或表单单控件等可识别信息架构，整体仍属极稀疏玩具式微件。</div>
+  
+<section class="view">
+  <div class="shot"><img src="file:///D:/code/A2UI/vlm/aesthetic-v4-vlm-judge-package-20260624/input/test_60/Case-18-carpool-001/card.dsl.png" alt="image screenshot" loading="lazy"></div>
+  <div class="view-body">
+    <h3>image <span>5.00/100</span></h3>
+    <table class="axis"><tbody><tr><th>视觉冲击 / 原创性</th><td>0.4</td></tr><tr><th>构图层级</th><td>0.6</td></tr><tr><th>字体表现</th><td>0.1</td></tr><tr><th>色彩与材质</th><td>0.8</td></tr><tr><th>细节完成度</th><td>0.2</td></tr><tr><th>基础可用性</th><td>0.8</td></tr></tbody></table>
+    <div class="occ ok">occlusion_overlap_check: always_on · no finding</div>
+    <p>命中 [0,10) 档：属于单卡片拼车状态微件/工具型页面；可见证据为一张橙黄渐变卡片、空白圆形头像、大号数字18、三行文字和一粒红色CTA按钮，整体系统默认字体、空白占位头像、大量留白、无列表或模块结构；未进 [10,20) 因为除渐变外缺乏第二个卡片、筛选chip或表单单控件等可识别信息架构，整体仍属极稀疏玩具式微件。</p>
+    
+  </div>
+</section>
+
+</article>
+
+<article class="card" data-bucket="[10,20)" data-status="scored">
+  <header>
+    <div>
+      <h2>card_dsl_17d9f070a8</h2>
+      <p>Case-18-carpool-006/card.dsl.png</p>
+    </div>
+    <div class="score"><b>15.00</b><span>/100</span><em>[10,20)</em></div>
+  </header>
+  <div class="rationale">image: 命中 [10,20) 档：属于单屏导航/出行小组件类低模板；可见证据是浅蓝渐变底、白字&#x27;8.6公里&#x27;距离大字、&#x27;距目的地&#x27;副标题、顶部右侧&#x27;已连接&#x27;状态、云图标天气胶囊和蓝色&#x27;导航&#x27;按钮，结构稳定但均为默认控件与默认排版。未进 [0,10) 是因为含状态、距离、天气、CTA 四类元素且无空列表；未进 [20,30) 是因为视觉偏系统默认、缺品牌系统、组件深度与卡片层级均不足。</div>
+  
+<section class="view">
+  <div class="shot"><img src="file:///D:/code/A2UI/vlm/aesthetic-v4-vlm-judge-package-20260624/input/test_60/Case-18-carpool-006/card.dsl.png" alt="image screenshot" loading="lazy"></div>
+  <div class="view-body">
+    <h3>image <span>15.00/100</span></h3>
+    <table class="axis"><tbody><tr><th>视觉冲击 / 原创性</th><td>1.4</td></tr><tr><th>构图层级</th><td>1.4</td></tr><tr><th>字体表现</th><td>0.8</td></tr><tr><th>色彩与材质</th><td>1.6</td></tr><tr><th>细节完成度</th><td>0.7</td></tr><tr><th>基础可用性</th><td>1.6</td></tr></tbody></table>
+    <div class="occ ok">occlusion_overlap_check: always_on · no finding</div>
+    <p>命中 [10,20) 档：属于单屏导航/出行小组件类低模板；可见证据是浅蓝渐变底、白字&#x27;8.6公里&#x27;距离大字、&#x27;距目的地&#x27;副标题、顶部右侧&#x27;已连接&#x27;状态、云图标天气胶囊和蓝色&#x27;导航&#x27;按钮，结构稳定但均为默认控件与默认排版。未进 [0,10) 是因为含状态、距离、天气、CTA 四类元素且无空列表；未进 [20,30) 是因为视觉偏系统默认、缺品牌系统、组件深度与卡片层级均不足。</p>
+    
+  </div>
+</section>
+
+</article>
+
+<article class="card" data-bucket="[10,20)" data-status="scored">
+  <header>
+    <div>
+      <h2>card_dsl_fe8c2d0df4</h2>
+      <p>Case-19-photo-album-001/card.dsl.png</p>
+    </div>
+    <div class="score"><b>15.00</b><span>/100</span><em>[10,20)</em></div>
+  </header>
+  <div class="rationale">image: 命中 [10,20) 档：属于单卡状态/通知型 widget；可见证据是深紫渐变背景、居中书本图标、128张大数字与红色提示语相册快满了；排版层级略有意图但无任何功能控件或产品深度；未进 [20,30) 因仅一个状态展示卡，无表单/列表/工作流等完整结构。</div>
+  
+<section class="view">
+  <div class="shot"><img src="file:///D:/code/A2UI/vlm/aesthetic-v4-vlm-judge-package-20260624/input/test_60/Case-19-photo-album-001/card.dsl.png" alt="image screenshot" loading="lazy"></div>
+  <div class="view-body">
+    <h3>image <span>15.00/100</span></h3>
+    <table class="axis"><tbody><tr><th>视觉冲击 / 原创性</th><td>1.4</td></tr><tr><th>构图层级</th><td>1.3</td></tr><tr><th>字体表现</th><td>0.7</td></tr><tr><th>色彩与材质</th><td>1.5</td></tr><tr><th>细节完成度</th><td>1.1</td></tr><tr><th>基础可用性</th><td>1.5</td></tr></tbody></table>
+    <div class="occ ok">occlusion_overlap_check: always_on · no finding</div>
+    <p>命中 [10,20) 档：属于单卡状态/通知型 widget；可见证据是深紫渐变背景、居中书本图标、128张大数字与红色提示语相册快满了；排版层级略有意图但无任何功能控件或产品深度；未进 [20,30) 因仅一个状态展示卡，无表单/列表/工作流等完整结构。</p>
+    
+  </div>
+</section>
+
+</article>
+
+<article class="card" data-bucket="[0,10)" data-status="scored">
+  <header>
+    <div>
+      <h2>card_dsl_87e25088e3</h2>
+      <p>Case-19-photo-album-006/card.dsl.png</p>
+    </div>
+    <div class="score"><b>5.00</b><span>/100</span><em>[0,10)</em></div>
+  </header>
+  <div class="rationale">image: 命中 [0,10) 档：属于极简单卡通知/提醒玩具工具；可见证据是橙色渐变背景上仅有一个日历图标、相册提醒/同步会/14:00-14:30 文本、一个文字药丸和白色打开按钮，整体被大片留白和默认控件占据，无真实视觉系统；未进 [10,20) 因为缺少多个输入/筛选/列表等控件状态，结构比低模板更裸。</div>
+  
+<section class="view">
+  <div class="shot"><img src="file:///D:/code/A2UI/vlm/aesthetic-v4-vlm-judge-package-20260624/input/test_60/Case-19-photo-album-006/card.dsl.png" alt="image screenshot" loading="lazy"></div>
+  <div class="view-body">
+    <h3>image <span>5.00/100</span></h3>
+    <table class="axis"><tbody><tr><th>视觉冲击 / 原创性</th><td>0.5</td></tr><tr><th>构图层级</th><td>0.5</td></tr><tr><th>字体表现</th><td>0.0</td></tr><tr><th>色彩与材质</th><td>0.7</td></tr><tr><th>细节完成度</th><td>0.0</td></tr><tr><th>基础可用性</th><td>0.7</td></tr></tbody></table>
+    <div class="occ ok">occlusion_overlap_check: always_on · no finding</div>
+    <p>命中 [0,10) 档：属于极简单卡通知/提醒玩具工具；可见证据是橙色渐变背景上仅有一个日历图标、相册提醒/同步会/14:00-14:30 文本、一个文字药丸和白色打开按钮，整体被大片留白和默认控件占据，无真实视觉系统；未进 [10,20) 因为缺少多个输入/筛选/列表等控件状态，结构比低模板更裸。</p>
+    
+  </div>
+</section>
+
+</article>
+
+<article class="card" data-bucket="[0,10)" data-status="scored">
+  <header>
+    <div>
+      <h2>card_dsl_19a6b96dd2</h2>
+      <p>Case-20-notif-aggregate-001/card.dsl.png</p>
+    </div>
+    <div class="score"><b>5.00</b><span>/100</span><em>[0,10)</em></div>
+  </header>
+  <div class="rationale">image: 命中 [0,10) 档：属于极简单卡工具/会议提醒微件类型；可见证据为浅灰圆角卡片、一只淡色日历图标、橙色&#x27;紧急&#x27;徽标、&#x27;09:30&#x27;时间、&#x27;项目周会&#x27;标题与&#x27;进微信&#x27;按钮，内容稀疏、视觉系统原始、留白巨大；未进 [10,20) 因为没有列表/筛选/多控件等可见结构，仅一个默认风格单卡微件。</div>
+  
+<section class="view">
+  <div class="shot"><img src="file:///D:/code/A2UI/vlm/aesthetic-v4-vlm-judge-package-20260624/input/test_60/Case-20-notif-aggregate-001/card.dsl.png" alt="image screenshot" loading="lazy"></div>
+  <div class="view-body">
+    <h3>image <span>5.00/100</span></h3>
+    <table class="axis"><tbody><tr><th>视觉冲击 / 原创性</th><td>0.5</td></tr><tr><th>构图层级</th><td>0.5</td></tr><tr><th>字体表现</th><td>0.0</td></tr><tr><th>色彩与材质</th><td>0.7</td></tr><tr><th>细节完成度</th><td>0.1</td></tr><tr><th>基础可用性</th><td>0.7</td></tr></tbody></table>
+    <div class="occ ok">occlusion_overlap_check: always_on · no finding</div>
+    <p>命中 [0,10) 档：属于极简单卡工具/会议提醒微件类型；可见证据为浅灰圆角卡片、一只淡色日历图标、橙色&#x27;紧急&#x27;徽标、&#x27;09:30&#x27;时间、&#x27;项目周会&#x27;标题与&#x27;进微信&#x27;按钮，内容稀疏、视觉系统原始、留白巨大；未进 [10,20) 因为没有列表/筛选/多控件等可见结构，仅一个默认风格单卡微件。</p>
+    
+  </div>
+</section>
+
+</article>
+
+<article class="card" data-bucket="[0,10)" data-status="scored">
+  <header>
+    <div>
+      <h2>card_dsl_0a56f37b3f</h2>
+      <p>Case-20-notif-aggregate-006/card.dsl.png</p>
+    </div>
+    <div class="score"><b>5.00</b><span>/100</span><em>[0,10)</em></div>
+  </header>
+  <div class="rationale">image: 命中 [0,10) 档：属于单卡消息提醒/小组件工具，仅有黄色渐变背景、群消息标题、两行简单列表和一颗&#x27;进群&#x27;按钮，可见证据为系统字体、默认圆角胶囊、橙色&#x27;紧急&#x27;标签及弱层级；未进 [10,20) 因缺少筛选/输入/多控件/导航等任何可识别的工作流与组件系统，无产品深度，整体仅为裸露的卡片雏形。</div>
+  
+<section class="view">
+  <div class="shot"><img src="file:///D:/code/A2UI/vlm/aesthetic-v4-vlm-judge-package-20260624/input/test_60/Case-20-notif-aggregate-006/card.dsl.png" alt="image screenshot" loading="lazy"></div>
+  <div class="view-body">
+    <h3>image <span>5.00/100</span></h3>
+    <table class="axis"><tbody><tr><th>视觉冲击 / 原创性</th><td>0.4</td></tr><tr><th>构图层级</th><td>0.6</td></tr><tr><th>字体表现</th><td>0.1</td></tr><tr><th>色彩与材质</th><td>0.8</td></tr><tr><th>细节完成度</th><td>0.1</td></tr><tr><th>基础可用性</th><td>0.8</td></tr></tbody></table>
+    <div class="occ ok">occlusion_overlap_check: always_on · no finding</div>
+    <p>命中 [0,10) 档：属于单卡消息提醒/小组件工具，仅有黄色渐变背景、群消息标题、两行简单列表和一颗&#x27;进群&#x27;按钮，可见证据为系统字体、默认圆角胶囊、橙色&#x27;紧急&#x27;标签及弱层级；未进 [10,20) 因缺少筛选/输入/多控件/导航等任何可识别的工作流与组件系统，无产品深度，整体仅为裸露的卡片雏形。</p>
+    
+  </div>
+</section>
+
+</article>
+
+<article class="card" data-bucket="[0,10)" data-status="scored">
+  <header>
+    <div>
+      <h2>card_dsl_fcb4e9ebed</h2>
+      <p>Case-21-stocks-001/card.dsl.png</p>
+    </div>
+    <div class="score"><b>5.00</b><span>/100</span><em>[0,10)</em></div>
+  </header>
+  <div class="rationale">image: 命中 [0,10) 档：属于单卡片工具小部件；可见证据为基金组合收益大数字+深圳天气小卡组合，浅灰圆角底，系统默认无衬线字体，灰色单色文字，天气图标为通用 emoji 风格，无品牌色、组件体系或层级节奏。未进 [10,20) 因为页面仅为一张圆角卡片，缺少列表/表单/导航等模板结构，视觉系统基本缺席，仅靠大数字撑场。</div>
+  
+<section class="view">
+  <div class="shot"><img src="file:///D:/code/A2UI/vlm/aesthetic-v4-vlm-judge-package-20260624/input/test_60/Case-21-stocks-001/card.dsl.png" alt="image screenshot" loading="lazy"></div>
+  <div class="view-body">
+    <h3>image <span>5.00/100</span></h3>
+    <table class="axis"><tbody><tr><th>视觉冲击 / 原创性</th><td>0.5</td></tr><tr><th>构图层级</th><td>0.5</td></tr><tr><th>字体表现</th><td>0.0</td></tr><tr><th>色彩与材质</th><td>0.7</td></tr><tr><th>细节完成度</th><td>0.0</td></tr><tr><th>基础可用性</th><td>0.7</td></tr></tbody></table>
+    <div class="occ ok">occlusion_overlap_check: always_on · no finding</div>
+    <p>命中 [0,10) 档：属于单卡片工具小部件；可见证据为基金组合收益大数字+深圳天气小卡组合，浅灰圆角底，系统默认无衬线字体，灰色单色文字，天气图标为通用 emoji 风格，无品牌色、组件体系或层级节奏。未进 [10,20) 因为页面仅为一张圆角卡片，缺少列表/表单/导航等模板结构，视觉系统基本缺席，仅靠大数字撑场。</p>
+    
+  </div>
+</section>
+
+</article>
+
+<article class="card" data-bucket="[0,10)" data-status="scored">
+  <header>
+    <div>
+      <h2>card_dsl_ef429b55f5</h2>
+      <p>Case-21-stocks-006/card.dsl.png</p>
+    </div>
+    <div class="score"><b>5.00</b><span>/100</span><em>[0,10)</em></div>
+  </header>
+  <div class="rationale">image: 命中[0,10)档：属于裸玩具型金融小部件，仅一块绿色卡片展示自选股价格68.42、+1.86%、已登录徽标和一个去交易按钮；无图表、无列表、无数据深度，配色单一平铺，字体为默认系统字，无视觉系统。未进[10,20)因为整页只是一个单卡toy utility而非多控件模板。</div>
+  
+<section class="view">
+  <div class="shot"><img src="file:///D:/code/A2UI/vlm/aesthetic-v4-vlm-judge-package-20260624/input/test_60/Case-21-stocks-006/card.dsl.png" alt="image screenshot" loading="lazy"></div>
+  <div class="view-body">
+    <h3>image <span>5.00/100</span></h3>
+    <table class="axis"><tbody><tr><th>视觉冲击 / 原创性</th><td>0.5</td></tr><tr><th>构图层级</th><td>0.5</td></tr><tr><th>字体表现</th><td>0.0</td></tr><tr><th>色彩与材质</th><td>0.7</td></tr><tr><th>细节完成度</th><td>0.1</td></tr><tr><th>基础可用性</th><td>0.7</td></tr></tbody></table>
+    <div class="occ ok">occlusion_overlap_check: always_on · no finding</div>
+    <p>命中[0,10)档：属于裸玩具型金融小部件，仅一块绿色卡片展示自选股价格68.42、+1.86%、已登录徽标和一个去交易按钮；无图表、无列表、无数据深度，配色单一平铺，字体为默认系统字，无视觉系统。未进[10,20)因为整页只是一个单卡toy utility而非多控件模板。</p>
+    
+  </div>
+</section>
+
+</article>
+
+<article class="card" data-bucket="[0,10)" data-status="scored">
+  <header>
+    <div>
+      <h2>card_dsl_9e299193d6</h2>
+      <p>Case-22-express-001/card.dsl.png</p>
+    </div>
+    <div class="score"><b>5.00</b><span>/100</span><em>[0,10)</em></div>
+  </header>
+  <div class="rationale">image: 命中 [0,10) 档：属于单卡片通知/取件小组件；可见证据是橙色背景配大号白色标题&quot;还有2件在路&quot;、时间地点副文、两个默认胶囊按钮&quot;耳机保护套 已签收&quot;与&quot;去取件&quot;，无图标无插图无视觉系统；未进 [10,20) 因为仅一张卡片+两个默认按钮、缺乏完整页面结构与组件层次，属典型 bare toy utility。</div>
+  
+<section class="view">
+  <div class="shot"><img src="file:///D:/code/A2UI/vlm/aesthetic-v4-vlm-judge-package-20260624/input/test_60/Case-22-express-001/card.dsl.png" alt="image screenshot" loading="lazy"></div>
+  <div class="view-body">
+    <h3>image <span>5.00/100</span></h3>
+    <table class="axis"><tbody><tr><th>视觉冲击 / 原创性</th><td>0.5</td></tr><tr><th>构图层级</th><td>0.5</td></tr><tr><th>字体表现</th><td>0.0</td></tr><tr><th>色彩与材质</th><td>0.7</td></tr><tr><th>细节完成度</th><td>0.0</td></tr><tr><th>基础可用性</th><td>0.7</td></tr></tbody></table>
+    <div class="occ ok">occlusion_overlap_check: always_on · no finding</div>
+    <p>命中 [0,10) 档：属于单卡片通知/取件小组件；可见证据是橙色背景配大号白色标题&quot;还有2件在路&quot;、时间地点副文、两个默认胶囊按钮&quot;耳机保护套 已签收&quot;与&quot;去取件&quot;，无图标无插图无视觉系统；未进 [10,20) 因为仅一张卡片+两个默认按钮、缺乏完整页面结构与组件层次，属典型 bare toy utility。</p>
+    
+  </div>
+</section>
+
+</article>
+
+<article class="card" data-bucket="[10,20)" data-status="scored">
+  <header>
+    <div>
+      <h2>card_dsl_58354f0f1c</h2>
+      <p>Case-22-express-006/card.dsl.png</p>
+    </div>
+    <div class="score"><b>15.00</b><span>/100</span><em>[10,20)</em></div>
+  </header>
+  <div class="rationale">image: 命中 [10,20) 档：属于简易追踪小组件类型；可见证据为橙色背景、emoji图标、两个白色状态卡片；设计依赖默认系统字体、无材质深度与阴影渐变；未进更高档因整体缺乏视觉层次与品牌识别度，仅为基础模板化样式，视觉表现力与完成度均不足。</div>
+  
+<section class="view">
+  <div class="shot"><img src="file:///D:/code/A2UI/vlm/aesthetic-v4-vlm-judge-package-20260624/input/test_60/Case-22-express-006/card.dsl.png" alt="image screenshot" loading="lazy"></div>
+  <div class="view-body">
+    <h3>image <span>15.00/100</span></h3>
+    <table class="axis"><tbody><tr><th>视觉冲击 / 原创性</th><td>1.4</td></tr><tr><th>构图层级</th><td>1.4</td></tr><tr><th>字体表现</th><td>0.8</td></tr><tr><th>色彩与材质</th><td>1.6</td></tr><tr><th>细节完成度</th><td>0.7</td></tr><tr><th>基础可用性</th><td>1.6</td></tr></tbody></table>
+    <div class="occ ok">occlusion_overlap_check: always_on · no finding</div>
+    <p>命中 [10,20) 档：属于简易追踪小组件类型；可见证据为橙色背景、emoji图标、两个白色状态卡片；设计依赖默认系统字体、无材质深度与阴影渐变；未进更高档因整体缺乏视觉层次与品牌识别度，仅为基础模板化样式，视觉表现力与完成度均不足。</p>
+    
+  </div>
+</section>
+
+</article>
+
+<article class="card" data-bucket="[20,30)" data-status="scored">
+  <header>
+    <div>
+      <h2>card_dsl_d1ad8b641f</h2>
+      <p>Case-23-countdown-001/card.dsl.png</p>
+    </div>
+    <div class="score"><b>25.00</b><span>/100</span><em>[20,30)</em></div>
+  </header>
+  <div class="rationale">image: 命中 [20,30) 档：属于彩色单卡倒计时类小工具；可见证据为暖黄色统一底色、黑色去考点CTA、三行科目状态（待考/已结束）、大号2天倒计时与考试地点。未进 [30,40) 因为无多模块结构，仅为单一信息卡加列表，缺少次级内容深度、图表或系统化卡片体系；视觉处理有意识但仍是基础组件堆叠。</div>
+  
+<section class="view">
+  <div class="shot"><img src="file:///D:/code/A2UI/vlm/aesthetic-v4-vlm-judge-package-20260624/input/test_60/Case-23-countdown-001/card.dsl.png" alt="image screenshot" loading="lazy"></div>
+  <div class="view-body">
+    <h3>image <span>25.00/100</span></h3>
+    <table class="axis"><tbody><tr><th>视觉冲击 / 原创性</th><td>2.3</td></tr><tr><th>构图层级</th><td>2.0</td></tr><tr><th>字体表现</th><td>1.7</td></tr><tr><th>色彩与材质</th><td>2.2</td></tr><tr><th>细节完成度</th><td>1.5</td></tr><tr><th>基础可用性</th><td>2.2</td></tr></tbody></table>
+    <div class="occ ok">occlusion_overlap_check: always_on · no finding</div>
+    <p>命中 [20,30) 档：属于彩色单卡倒计时类小工具；可见证据为暖黄色统一底色、黑色去考点CTA、三行科目状态（待考/已结束）、大号2天倒计时与考试地点。未进 [30,40) 因为无多模块结构，仅为单一信息卡加列表，缺少次级内容深度、图表或系统化卡片体系；视觉处理有意识但仍是基础组件堆叠。</p>
+    
+  </div>
+</section>
+
+</article>
+
+<article class="card" data-bucket="[40,50)" data-status="scored">
+  <header>
+    <div>
+      <h2>card_dsl_22bf9d6458</h2>
+      <p>Case-23-countdown-006/card.dsl.png</p>
+    </div>
+    <div class="score"><b>45.00</b><span>/100</span><em>[40,50)</em></div>
+  </header>
+  <div class="rationale">image: 命中 [40,50) 档：属于紫色玻璃拟态倒计时小部件类型；可见证据是紫色渐变背景、毛玻璃右卡片（已完成/去年生日/已过347天/打开）、大号18天数字、日期与来源信息、底部半透明日历图形；排版层次与色彩统一。未进 [50,60) 因为这只是单卡小组件，缺少更丰富的状态、模块与图表深度。</div>
+  
+<section class="view">
+  <div class="shot"><img src="file:///D:/code/A2UI/vlm/aesthetic-v4-vlm-judge-package-20260624/input/test_60/Case-23-countdown-006/card.dsl.png" alt="image screenshot" loading="lazy"></div>
+  <div class="view-body">
+    <h3>image <span>45.00/100</span></h3>
+    <table class="axis"><tbody><tr><th>视觉冲击 / 原创性</th><td>3.8</td></tr><tr><th>构图层级</th><td>3.7</td></tr><tr><th>字体表现</th><td>3.1</td></tr><tr><th>色彩与材质</th><td>3.9</td></tr><tr><th>细节完成度</th><td>3.2</td></tr><tr><th>基础可用性</th><td>3.9</td></tr></tbody></table>
+    <div class="occ ok">occlusion_overlap_check: always_on · no finding</div>
+    <p>命中 [40,50) 档：属于紫色玻璃拟态倒计时小部件类型；可见证据是紫色渐变背景、毛玻璃右卡片（已完成/去年生日/已过347天/打开）、大号18天数字、日期与来源信息、底部半透明日历图形；排版层次与色彩统一。未进 [50,60) 因为这只是单卡小组件，缺少更丰富的状态、模块与图表深度。</p>
+    
+  </div>
+</section>
+
+</article>
+
+<article class="card" data-bucket="[10,20)" data-status="scored">
+  <header>
+    <div>
+      <h2>card_dsl_82c2c5b14b</h2>
+      <p>Case-24-todo-001/card.dsl.png</p>
+    </div>
+    <div class="score"><b>15.00</b><span>/100</span><em>[10,20)</em></div>
+  </header>
+  <div class="rationale">image: 命中 [10,20) 档：属于稀疏待办/天气小工具型页面；可见证据是浅蓝绿渐变背景、默认样式复选框三行待办（含&#x27;补水记录&#x27;已勾选、&#x27;高温户外跑&#x27;带橙色&#x27;危险&#x27;标签）、右侧29°C天气卡显示深圳多云与空气良、底部半透明&#x27;进应用&#x27;按钮。控件以默认白卡+系统字为主，无品牌系统与组件深度。&#x27;进应用&#x27;按钮与天气卡底部有轻微层叠，&#x27;空气 良&#x27;文字接近按钮边缘。未进 [20,30) 因缺少输入、统计、过滤芯片等多控件工作流，整体仍为单卡模板。</div>
+  
+<section class="view">
+  <div class="shot"><img src="file:///D:/code/A2UI/vlm/aesthetic-v4-vlm-judge-package-20260624/input/test_60/Case-24-todo-001/card.dsl.png" alt="image screenshot" loading="lazy"></div>
+  <div class="view-body">
+    <h3>image <span>15.00/100</span></h3>
+    <table class="axis"><tbody><tr><th>视觉冲击 / 原创性</th><td>1.4</td></tr><tr><th>构图层级</th><td>1.3</td></tr><tr><th>字体表现</th><td>0.8</td></tr><tr><th>色彩与材质</th><td>1.6</td></tr><tr><th>细节完成度</th><td>0.7</td></tr><tr><th>基础可用性</th><td>1.6</td></tr></tbody></table>
+    <div class="occ ok">occlusion_overlap_check: always_on · no finding</div>
+    <p>命中 [10,20) 档：属于稀疏待办/天气小工具型页面；可见证据是浅蓝绿渐变背景、默认样式复选框三行待办（含&#x27;补水记录&#x27;已勾选、&#x27;高温户外跑&#x27;带橙色&#x27;危险&#x27;标签）、右侧29°C天气卡显示深圳多云与空气良、底部半透明&#x27;进应用&#x27;按钮。控件以默认白卡+系统字为主，无品牌系统与组件深度。&#x27;进应用&#x27;按钮与天气卡底部有轻微层叠，&#x27;空气 良&#x27;文字接近按钮边缘。未进 [20,30) 因缺少输入、统计、过滤芯片等多控件工作流，整体仍为单卡模板。</p>
+    
+  </div>
+</section>
+
+</article>
+
+<article class="card" data-bucket="[10,20)" data-status="scored">
+  <header>
+    <div>
+      <h2>card_dsl_82c94bad8c</h2>
+      <p>Case-24-todo-006/card.dsl.png</p>
+    </div>
+    <div class="score"><b>15.00</b><span>/100</span><em>[10,20)</em></div>
+  </header>
+  <div class="rationale">image: 命中 [10,20) 档：属于单卡进度小部件类型；可见证据是圆角浅绿渐变卡片、75%大数字、绿色进度条、已完成6/共8项计数和&quot;打开&quot;按钮；视觉略强于 [0,10) 玩具但仅为单卡展示，控件极少无输入或筛选，无产品纵深，未进 [20,30)。</div>
+  
+<section class="view">
+  <div class="shot"><img src="file:///D:/code/A2UI/vlm/aesthetic-v4-vlm-judge-package-20260624/input/test_60/Case-24-todo-006/card.dsl.png" alt="image screenshot" loading="lazy"></div>
+  <div class="view-body">
+    <h3>image <span>15.00/100</span></h3>
+    <table class="axis"><tbody><tr><th>视觉冲击 / 原创性</th><td>1.4</td></tr><tr><th>构图层级</th><td>1.1</td></tr><tr><th>字体表现</th><td>0.8</td></tr><tr><th>色彩与材质</th><td>1.3</td></tr><tr><th>细节完成度</th><td>0.9</td></tr><tr><th>基础可用性</th><td>1.3</td></tr></tbody></table>
+    <div class="occ ok">occlusion_overlap_check: always_on · no finding</div>
+    <p>命中 [10,20) 档：属于单卡进度小部件类型；可见证据是圆角浅绿渐变卡片、75%大数字、绿色进度条、已完成6/共8项计数和&quot;打开&quot;按钮；视觉略强于 [0,10) 玩具但仅为单卡展示，控件极少无输入或筛选，无产品纵深，未进 [20,30)。</p>
+    
+  </div>
+</section>
+
+</article>
+
+<article class="card" data-bucket="[10,20)" data-status="scored">
+  <header>
+    <div>
+      <h2>card_dsl_fe5eaa1b2c</h2>
+      <p>Case-25-reading-001/card.dsl.png</p>
+    </div>
+    <div class="score"><b>15.00</b><span>/100</span><em>[10,20)</em></div>
+  </header>
+  <div class="rationale">image: 命中 [10,20) 档：属于简易天气小部件/单卡工具类型。可见证据：浅蓝渐变背景、系统字体标题、温度数字、emoji 云图、绿色&#x27;已连接&#x27;状态、单按钮&#x27;进日历&#x27;、三日预报列表。控件和排版均为默认层级，无品牌系统、空间留白过多。未进 [20,30) 因缺少多面板/字段工作流，仅一张主卡加预报列表，仍属低质量模板。</div>
+  
+<section class="view">
+  <div class="shot"><img src="file:///D:/code/A2UI/vlm/aesthetic-v4-vlm-judge-package-20260624/input/test_60/Case-25-reading-001/card.dsl.png" alt="image screenshot" loading="lazy"></div>
+  <div class="view-body">
+    <h3>image <span>15.00/100</span></h3>
+    <table class="axis"><tbody><tr><th>视觉冲击 / 原创性</th><td>1.3</td></tr><tr><th>构图层级</th><td>1.3</td></tr><tr><th>字体表现</th><td>0.7</td></tr><tr><th>色彩与材质</th><td>1.5</td></tr><tr><th>细节完成度</th><td>0.9</td></tr><tr><th>基础可用性</th><td>1.5</td></tr></tbody></table>
+    <div class="occ ok">occlusion_overlap_check: always_on · no finding</div>
+    <p>命中 [10,20) 档：属于简易天气小部件/单卡工具类型。可见证据：浅蓝渐变背景、系统字体标题、温度数字、emoji 云图、绿色&#x27;已连接&#x27;状态、单按钮&#x27;进日历&#x27;、三日预报列表。控件和排版均为默认层级，无品牌系统、空间留白过多。未进 [20,30) 因缺少多面板/字段工作流，仅一张主卡加预报列表，仍属低质量模板。</p>
+    
+  </div>
+</section>
+
+</article>
+
+<article class="card" data-bucket="[80,100]" data-status="scored">
+  <header>
+    <div>
+      <h2>card_dsl_c16a84fbd9</h2>
+      <p>Case-25-reading-006/card.dsl.png</p>
+    </div>
+    <div class="score"><b>85.00</b><span>/100</span><em>[80,100]</em></div>
+  </header>
+  <div class="rationale">image: score_only</div>
+  
+<section class="view">
+  <div class="shot"><img src="file:///D:/code/A2UI/vlm/aesthetic-v4-vlm-judge-package-20260624/input/test_60/Case-25-reading-006/card.dsl.png" alt="image screenshot" loading="lazy"></div>
+  <div class="view-body">
+    <h3>image <span>85.00/100</span></h3>
+    <table class="axis"><tbody><tr><th>视觉冲击 / 原创性</th><td>6.8</td></tr><tr><th>构图层级</th><td>6.8</td></tr><tr><th>字体表现</th><td>6.8</td></tr><tr><th>色彩与材质</th><td>6.8</td></tr><tr><th>细节完成度</th><td>6.8</td></tr><tr><th>基础可用性</th><td>6.8</td></tr></tbody></table>
+    <div class="occ ok">occlusion_overlap_check: always_on · no finding</div>
+    <p>score_only</p>
+    
+  </div>
+</section>
+
+</article>
+
+<article class="card" data-bucket="[20,30)" data-status="scored">
+  <header>
+    <div>
+      <h2>card_dsl_b14b66b8c8</h2>
+      <p>Case-26-group-buy-001/card.dsl.png</p>
+    </div>
+    <div class="score"><b>25.00</b><span>/100</span><em>[20,30)</em></div>
+  </header>
+  <div class="rationale">image: 命中 [20,30) 档：属于单卡片状态通知/拼单进度widget类型；可见证据为深紫渐变背景、铃铛图标、橙色进度条、还差3杯主文案、右侧日程提醒次级卡片和打开App按钮，视觉处理比默认表单更有氛围。但未进 [30,40) 因为内容薄、缺少品牌系统与多模块深度，仅为单一状态展示卡片，组件语言仍是常见通知模板。</div>
+  
+<section class="view">
+  <div class="shot"><img src="file:///D:/code/A2UI/vlm/aesthetic-v4-vlm-judge-package-20260624/input/test_60/Case-26-group-buy-001/card.dsl.png" alt="image screenshot" loading="lazy"></div>
+  <div class="view-body">
+    <h3>image <span>25.00/100</span></h3>
+    <table class="axis"><tbody><tr><th>视觉冲击 / 原创性</th><td>2.1</td></tr><tr><th>构图层级</th><td>2.1</td></tr><tr><th>字体表现</th><td>1.8</td></tr><tr><th>色彩与材质</th><td>2.3</td></tr><tr><th>细节完成度</th><td>1.4</td></tr><tr><th>基础可用性</th><td>2.3</td></tr></tbody></table>
+    <div class="occ ok">occlusion_overlap_check: always_on · no finding</div>
+    <p>命中 [20,30) 档：属于单卡片状态通知/拼单进度widget类型；可见证据为深紫渐变背景、铃铛图标、橙色进度条、还差3杯主文案、右侧日程提醒次级卡片和打开App按钮，视觉处理比默认表单更有氛围。但未进 [30,40) 因为内容薄、缺少品牌系统与多模块深度，仅为单一状态展示卡片，组件语言仍是常见通知模板。</p>
+    
+  </div>
+</section>
+
+</article>
+
+<article class="card" data-bucket="[0,10)" data-status="scored">
+  <header>
+    <div>
+      <h2>card_dsl_a1ed5b3c8b</h2>
+      <p>Case-26-group-buy-006/card.dsl.png</p>
+    </div>
+    <div class="score"><b>5.00</b><span>/100</span><em>[0,10)</em></div>
+  </header>
+  <div class="rationale">image: 命中 [0,10) 档：属于空白渐变单操作面板类型。证据：顶部仅一个小药丸标签邻里拼单、一行大字拼单成功、一行副文2人成团已锁价、一个绿色CTA去App查看，白绿渐变背景且内容极少，无产品深度或视觉系统。未进 [10,20) 因为属tiny default表单，缺少多控件、列表、表头等结构，仅一个成功提示卡片加单按钮。</div>
+  
+<section class="view">
+  <div class="shot"><img src="file:///D:/code/A2UI/vlm/aesthetic-v4-vlm-judge-package-20260624/input/test_60/Case-26-group-buy-006/card.dsl.png" alt="image screenshot" loading="lazy"></div>
+  <div class="view-body">
+    <h3>image <span>5.00/100</span></h3>
+    <table class="axis"><tbody><tr><th>视觉冲击 / 原创性</th><td>0.6</td></tr><tr><th>构图层级</th><td>0.3</td></tr><tr><th>字体表现</th><td>0.0</td></tr><tr><th>色彩与材质</th><td>0.5</td></tr><tr><th>细节完成度</th><td>0.1</td></tr><tr><th>基础可用性</th><td>0.5</td></tr></tbody></table>
+    <div class="occ ok">occlusion_overlap_check: always_on · no finding</div>
+    <p>命中 [0,10) 档：属于空白渐变单操作面板类型。证据：顶部仅一个小药丸标签邻里拼单、一行大字拼单成功、一行副文2人成团已锁价、一个绿色CTA去App查看，白绿渐变背景且内容极少，无产品深度或视觉系统。未进 [10,20) 因为属tiny default表单，缺少多控件、列表、表头等结构，仅一个成功提示卡片加单按钮。</p>
+    
+  </div>
+</section>
+
+</article>
+
+<article class="card" data-bucket="[0,10)" data-status="scored">
+  <header>
+    <div>
+      <h2>card_dsl_a03a8bcf18</h2>
+      <p>Case-27-utility-bill-001/card.dsl.png</p>
+    </div>
+    <div class="score"><b>5.00</b><span>/100</span><em>[0,10)</em></div>
+  </header>
+  <div class="rationale">image: 命中 [0,10) 档：属于电量/费用裸玩具型单卡工具；可见证据是浅蓝渐变背景、一行电量+天气小信息、一组&#x27;剩余32度&#x27;主读数、两个默认胶囊按钮(快欠费/拔客服)、下半部大面积空白,且&#x27;32度&#x27;右侧被裁切。未进 [10,20) 因为仅两个胶囊按钮与一个读数,无表单/列表/筛选等状态,仍是bare utility,且存在文本裁切缺陷。</div>
+  
+<section class="view">
+  <div class="shot"><img src="file:///D:/code/A2UI/vlm/aesthetic-v4-vlm-judge-package-20260624/input/test_60/Case-27-utility-bill-001/card.dsl.png" alt="image screenshot" loading="lazy"></div>
+  <div class="view-body">
+    <h3>image <span>5.00/100</span></h3>
+    <table class="axis"><tbody><tr><th>视觉冲击 / 原创性</th><td>0.4</td></tr><tr><th>构图层级</th><td>0.2</td></tr><tr><th>字体表现</th><td>0.3</td></tr><tr><th>色彩与材质</th><td>0.8</td></tr><tr><th>细节完成度</th><td>0.2</td></tr><tr><th>基础可用性</th><td>0.2</td></tr></tbody></table>
+    <div class="occ warn">occlusion_overlap_check: always_on · affected axes 4</div><table class="occ-table"><tbody><tr><th>text_graphic</th><td>severe</td><td>text over image/icon</td><td>命中 [0,10) 档：属于电量/费用裸玩具型单卡工具；可见证据是浅蓝渐变背景、一行电量+天气小信息、一组&#x27;剩余32度&#x27;主读数、两个默认胶囊按钮(快欠费/拔客服)、下半部大面积空白,且&#x27;32度&#x27;右侧被裁切。未进 [10,20) 因为仅两个胶囊按钮与一个读数,无表单/列表/筛选等状态,仍是bare utility,且存在文本裁切缺陷。</td></tr></tbody></table>
+    <p>命中 [0,10) 档：属于电量/费用裸玩具型单卡工具；可见证据是浅蓝渐变背景、一行电量+天气小信息、一组&#x27;剩余32度&#x27;主读数、两个默认胶囊按钮(快欠费/拔客服)、下半部大面积空白,且&#x27;32度&#x27;右侧被裁切。未进 [10,20) 因为仅两个胶囊按钮与一个读数,无表单/列表/筛选等状态,仍是bare utility,且存在文本裁切缺陷。</p>
+    
+  </div>
+</section>
+
+</article>
+
+<article class="card" data-bucket="[20,30)" data-status="scored">
+  <header>
+    <div>
+      <h2>card_dsl_6b00a0abbb</h2>
+      <p>Case-27-utility-bill-006/card.dsl.png</p>
+    </div>
+    <div class="score"><b>25.00</b><span>/100</span><em>[20,30)</em></div>
+  </header>
+  <div class="rationale">image: 命中[20,30)档：属于单卡彩色提醒类玩具工具/账单小部件；可见证据为橙色渐变背景、闪电图标、欠费主标题、红色提醒子卡、白色去缴费CTA；视觉处理（渐变、图标、卡片层级）有一定设计感。未进[30,40)因为仅一块提醒卡+一个按钮，内容极薄，缺乏列表/筛选/多状态等完整工作流深度。</div>
+  
+<section class="view">
+  <div class="shot"><img src="file:///D:/code/A2UI/vlm/aesthetic-v4-vlm-judge-package-20260624/input/test_60/Case-27-utility-bill-006/card.dsl.png" alt="image screenshot" loading="lazy"></div>
+  <div class="view-body">
+    <h3>image <span>25.00/100</span></h3>
+    <table class="axis"><tbody><tr><th>视觉冲击 / 原创性</th><td>2.3</td></tr><tr><th>构图层级</th><td>2.0</td></tr><tr><th>字体表现</th><td>1.4</td></tr><tr><th>色彩与材质</th><td>2.2</td></tr><tr><th>细节完成度</th><td>1.8</td></tr><tr><th>基础可用性</th><td>2.2</td></tr></tbody></table>
+    <div class="occ ok">occlusion_overlap_check: always_on · no finding</div>
+    <p>命中[20,30)档：属于单卡彩色提醒类玩具工具/账单小部件；可见证据为橙色渐变背景、闪电图标、欠费主标题、红色提醒子卡、白色去缴费CTA；视觉处理（渐变、图标、卡片层级）有一定设计感。未进[30,40)因为仅一块提醒卡+一个按钮，内容极薄，缺乏列表/筛选/多状态等完整工作流深度。</p>
+    
+  </div>
+</section>
+
+</article>
+
+<article class="card" data-bucket="[0,10)" data-status="scored">
+  <header>
+    <div>
+      <h2>card_dsl_72c52081a6</h2>
+      <p>Case-28-veggie-price-001/card.dsl.png</p>
+    </div>
+    <div class="score"><b>5.00</b><span>/100</span><em>[0,10)</em></div>
+  </header>
+  <div class="rationale">image: 命中 [0,10) 档：属于极简单卡小工具/价签类（菜价）；可见证据为绿色渐变背景、标题菜价+已连接徽章、一行青菜3.8主价、比昨日低0.4副文、08:30时间戳、一个进日程胶囊按钮，余下大量留白；未进 [10,20) 因为仅有单卡+单按钮+默认排版，无列表/表格/筛选/第二卡片等结构，视觉系统薄弱。</div>
+  
+<section class="view">
+  <div class="shot"><img src="file:///D:/code/A2UI/vlm/aesthetic-v4-vlm-judge-package-20260624/input/test_60/Case-28-veggie-price-001/card.dsl.png" alt="image screenshot" loading="lazy"></div>
+  <div class="view-body">
+    <h3>image <span>5.00/100</span></h3>
+    <table class="axis"><tbody><tr><th>视觉冲击 / 原创性</th><td>0.5</td></tr><tr><th>构图层级</th><td>0.5</td></tr><tr><th>字体表现</th><td>0.0</td></tr><tr><th>色彩与材质</th><td>0.7</td></tr><tr><th>细节完成度</th><td>0.1</td></tr><tr><th>基础可用性</th><td>0.7</td></tr></tbody></table>
+    <div class="occ ok">occlusion_overlap_check: always_on · no finding</div>
+    <p>命中 [0,10) 档：属于极简单卡小工具/价签类（菜价）；可见证据为绿色渐变背景、标题菜价+已连接徽章、一行青菜3.8主价、比昨日低0.4副文、08:30时间戳、一个进日程胶囊按钮，余下大量留白；未进 [10,20) 因为仅有单卡+单按钮+默认排版，无列表/表格/筛选/第二卡片等结构，视觉系统薄弱。</p>
+    
+  </div>
+</section>
+
+</article>
+
+<article class="card" data-bucket="[0,10)" data-status="scored">
+  <header>
+    <div>
+      <h2>card_dsl_2367cc4813</h2>
+      <p>Case-28-veggie-price-006/card.dsl.png</p>
+    </div>
+    <div class="score"><b>5.00</b><span>/100</span><em>[0,10)</em></div>
+  </header>
+  <div class="rationale">image: 命中 [0,10) 档：属于单卡蔬菜价格小工具/玩具式 widget；可见证据为浅绿渐变背景、单一商品名（上海青）、一个特大价格数字、一个提醒按钮和右侧库存卡，整体内容极薄、控件少、留白巨大，视觉系统浅。未进 [10,20) 因为并非含多种控件/列表行的多模块页面，只是单数据点加单按钮的极简工具。</div>
+  
+<section class="view">
+  <div class="shot"><img src="file:///D:/code/A2UI/vlm/aesthetic-v4-vlm-judge-package-20260624/input/test_60/Case-28-veggie-price-006/card.dsl.png" alt="image screenshot" loading="lazy"></div>
+  <div class="view-body">
+    <h3>image <span>5.00/100</span></h3>
+    <table class="axis"><tbody><tr><th>视觉冲击 / 原创性</th><td>0.6</td></tr><tr><th>构图层级</th><td>0.3</td></tr><tr><th>字体表现</th><td>0.0</td></tr><tr><th>色彩与材质</th><td>0.5</td></tr><tr><th>细节完成度</th><td>0.1</td></tr><tr><th>基础可用性</th><td>0.5</td></tr></tbody></table>
+    <div class="occ ok">occlusion_overlap_check: always_on · no finding</div>
+    <p>命中 [0,10) 档：属于单卡蔬菜价格小工具/玩具式 widget；可见证据为浅绿渐变背景、单一商品名（上海青）、一个特大价格数字、一个提醒按钮和右侧库存卡，整体内容极薄、控件少、留白巨大，视觉系统浅。未进 [10,20) 因为并非含多种控件/列表行的多模块页面，只是单数据点加单按钮的极简工具。</p>
+    
+  </div>
+</section>
+
+</article>
+
+<article class="card" data-bucket="[0,10)" data-status="scored">
+  <header>
+    <div>
+      <h2>card_dsl_d44c0e2102</h2>
+      <p>Case-29-elderly-care-001/card.dsl.png</p>
+    </div>
+    <div class="score"><b>5.00</b><span>/100</span><em>[0,10)</em></div>
+  </header>
+  <div class="rationale">image: 命中 [0,10) 档：属于空状态服药/健康提醒小卡片，类 v27 中&#x27;空用药提醒表单&#x27;原型。证据：铃铛+&#x27;健康提醒&#x27;标题、单条白色服药提醒卡片含时钟 09:30、日历&#x27;家中&#x27;、绿色&#x27;打开&#x27;按钮与&#x27;3项&#x27;角标，无列表无多模块，配色单调、留白大、视觉系统极简。未进 [10,20) 因仅一卡片一按钮，无下拉/筛选/列表/多输入等更丰富控件集，深度不足。</div>
+  
+<section class="view">
+  <div class="shot"><img src="file:///D:/code/A2UI/vlm/aesthetic-v4-vlm-judge-package-20260624/input/test_60/Case-29-elderly-care-001/card.dsl.png" alt="image screenshot" loading="lazy"></div>
+  <div class="view-body">
+    <h3>image <span>5.00/100</span></h3>
+    <table class="axis"><tbody><tr><th>视觉冲击 / 原创性</th><td>0.7</td></tr><tr><th>构图层级</th><td>0.4</td></tr><tr><th>字体表现</th><td>0.0</td></tr><tr><th>色彩与材质</th><td>0.6</td></tr><tr><th>细节完成度</th><td>0.2</td></tr><tr><th>基础可用性</th><td>0.6</td></tr></tbody></table>
+    <div class="occ ok">occlusion_overlap_check: always_on · no finding</div>
+    <p>命中 [0,10) 档：属于空状态服药/健康提醒小卡片，类 v27 中&#x27;空用药提醒表单&#x27;原型。证据：铃铛+&#x27;健康提醒&#x27;标题、单条白色服药提醒卡片含时钟 09:30、日历&#x27;家中&#x27;、绿色&#x27;打开&#x27;按钮与&#x27;3项&#x27;角标，无列表无多模块，配色单调、留白大、视觉系统极简。未进 [10,20) 因仅一卡片一按钮，无下拉/筛选/列表/多输入等更丰富控件集，深度不足。</p>
+    
+  </div>
+</section>
+
+</article>
+
+<article class="card" data-bucket="[0,10)" data-status="scored">
+  <header>
+    <div>
+      <h2>card_dsl_96ce3fc4bf</h2>
+      <p>Case-29-elderly-care-006/card.dsl.png</p>
+    </div>
+    <div class="score"><b>5.00</b><span>/100</span><em>[0,10)</em></div>
+  </header>
+  <div class="rationale">image: 命中 [0,10) 档：属于单卡片健身/步数玩具小部件；可见证据为橙色背景、一行标题、一组大数字读数、一个红橙胶囊按钮内含两段文字，无导航、无图表、无品牌系统、无层次细节；未进 [10,20) 因为无额外控件/列表/筛选/表头，仍是裸单卡 toy utility，无真实视觉体系。</div>
+  
+<section class="view">
+  <div class="shot"><img src="file:///D:/code/A2UI/vlm/aesthetic-v4-vlm-judge-package-20260624/input/test_60/Case-29-elderly-care-006/card.dsl.png" alt="image screenshot" loading="lazy"></div>
+  <div class="view-body">
+    <h3>image <span>5.00/100</span></h3>
+    <table class="axis"><tbody><tr><th>视觉冲击 / 原创性</th><td>0.7</td></tr><tr><th>构图层级</th><td>0.4</td></tr><tr><th>字体表现</th><td>0.0</td></tr><tr><th>色彩与材质</th><td>0.6</td></tr><tr><th>细节完成度</th><td>0.0</td></tr><tr><th>基础可用性</th><td>0.6</td></tr></tbody></table>
+    <div class="occ ok">occlusion_overlap_check: always_on · no finding</div>
+    <p>命中 [0,10) 档：属于单卡片健身/步数玩具小部件；可见证据为橙色背景、一行标题、一组大数字读数、一个红橙胶囊按钮内含两段文字，无导航、无图表、无品牌系统、无层次细节；未进 [10,20) 因为无额外控件/列表/筛选/表头，仍是裸单卡 toy utility，无真实视觉体系。</p>
+    
+  </div>
+</section>
+
+</article>
+
+<article class="card" data-bucket="[20,30)" data-status="scored">
+  <header>
+    <div>
+      <h2>card_dsl_d70e0f74a0</h2>
+      <p>Case-30-pet-feeder-001/card.dsl.png</p>
+    </div>
+    <div class="score"><b>25.00</b><span>/100</span><em>[20,30)</em></div>
+  </header>
+  <div class="rationale">image: 命中 [20,30) 档：属于简单宠物喂食/健康日志类原型；可见证据是两张默认圆角卡（出粮42g/余粮12% 与18:30加粮提醒）、橙蓝按钮、闹钟图标，时间状态完整但仅两个卡面、缺少导航与列表纵深；未进 [30,40) 因为视觉语言仍为通用模板、字号层级默认、橙红蓝配色与圆角按钮无品牌系统、缺多区/图表/历史记录的产品深度。</div>
+  
+<section class="view">
+  <div class="shot"><img src="file:///D:/code/A2UI/vlm/aesthetic-v4-vlm-judge-package-20260624/input/test_60/Case-30-pet-feeder-001/card.dsl.png" alt="image screenshot" loading="lazy"></div>
+  <div class="view-body">
+    <h3>image <span>25.00/100</span></h3>
+    <table class="axis"><tbody><tr><th>视觉冲击 / 原创性</th><td>2.1</td></tr><tr><th>构图层级</th><td>2.1</td></tr><tr><th>字体表现</th><td>1.8</td></tr><tr><th>色彩与材质</th><td>2.3</td></tr><tr><th>细节完成度</th><td>1.7</td></tr><tr><th>基础可用性</th><td>2.3</td></tr></tbody></table>
+    <div class="occ ok">occlusion_overlap_check: always_on · no finding</div>
+    <p>命中 [20,30) 档：属于简单宠物喂食/健康日志类原型；可见证据是两张默认圆角卡（出粮42g/余粮12% 与18:30加粮提醒）、橙蓝按钮、闹钟图标，时间状态完整但仅两个卡面、缺少导航与列表纵深；未进 [30,40) 因为视觉语言仍为通用模板、字号层级默认、橙红蓝配色与圆角按钮无品牌系统、缺多区/图表/历史记录的产品深度。</p>
+    
+  </div>
+</section>
+
+</article>
+
+<article class="card" data-bucket="[50,60)" data-status="scored">
+  <header>
+    <div>
+      <h2>card_dsl_db000a4c72</h2>
+      <p>Case-30-pet-feeder-006/card.dsl.png</p>
+    </div>
+    <div class="score"><b>56.25</b><span>/100</span><em>[50,60)</em></div>
+  </header>
+  <div class="rationale">image: score_only</div>
+  
+<section class="view">
+  <div class="shot"><img src="file:///D:/code/A2UI/vlm/aesthetic-v4-vlm-judge-package-20260624/input/test_60/Case-30-pet-feeder-006/card.dsl.png" alt="image screenshot" loading="lazy"></div>
+  <div class="view-body">
+    <h3>image <span>56.25/100</span></h3>
+    <table class="axis"><tbody><tr><th>视觉冲击 / 原创性</th><td>4.5</td></tr><tr><th>构图层级</th><td>4.5</td></tr><tr><th>字体表现</th><td>4.5</td></tr><tr><th>色彩与材质</th><td>4.5</td></tr><tr><th>细节完成度</th><td>4.5</td></tr><tr><th>基础可用性</th><td>4.5</td></tr></tbody></table>
+    <div class="occ ok">occlusion_overlap_check: always_on · no finding</div>
+    <p>score_only</p>
+    
+  </div>
+</section>
+
+</article>
+
+    </section>
+  </main>
+</body>
+</html>

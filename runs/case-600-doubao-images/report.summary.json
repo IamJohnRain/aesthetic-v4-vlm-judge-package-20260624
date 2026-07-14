@@ -1,0 +1,17 @@
+{
+  "bucket_counts": {
+    "[0,10)": 42,
+    "[10,20)": 13,
+    "[20,30)": 2,
+    "[30,40)": 1,
+    "[40,50)": 2
+  },
+  "csv": "D:\\code\\A2UI\\vlm\\aesthetic-v4-vlm-judge-package-20260624\\runs\\case-600-doubao-images\\scores.csv",
+  "out": "D:\\code\\A2UI\\vlm\\aesthetic-v4-vlm-judge-package-20260624\\runs\\case-600-doubao-images\\report.html",
+  "profile": "aesthetic-v4",
+  "records": 60,
+  "score_breakdown": "on",
+  "status_counts": {
+    "scored": 60
+  }
+}

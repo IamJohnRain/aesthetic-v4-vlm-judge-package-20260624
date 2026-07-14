@@ -1,0 +1,15 @@
+{
+  "backend": "model",
+  "case_image_name": null,
+  "csv": "D:\\code\\A2UI\\vlm\\aesthetic-v4-vlm-judge-package-20260624\\runs\\case-600-all-images\\scores.csv",
+  "finished_at": "2026-07-14T02:31:05.430397+00:00",
+  "input": "D:\\code\\A2UI\\vlm\\aesthetic-v4-vlm-judge-package-20260624\\input\\test_60",
+  "manifest": "D:\\code\\A2UI\\vlm\\aesthetic-v4-vlm-judge-package-20260624\\runs\\case-600-all-images\\manifest.jsonl",
+  "model": "MiniMax-M3",
+  "model_provider": "minimax",
+  "profile": "aesthetic-v4",
+  "records": 60,
+  "report": "D:\\code\\A2UI\\vlm\\aesthetic-v4-vlm-judge-package-20260624\\runs\\case-600-all-images\\report.html",
+  "run_dir": "D:\\code\\A2UI\\vlm\\aesthetic-v4-vlm-judge-package-20260624\\runs\\case-600-all-images",
+  "scores": "D:\\code\\A2UI\\vlm\\aesthetic-v4-vlm-judge-package-20260624\\runs\\case-600-all-images\\scores.jsonl"
+}
