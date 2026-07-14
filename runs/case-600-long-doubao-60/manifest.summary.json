@@ -1,8 +1,8 @@
 {
   "case_image_name": "card.dsl.png",
-  "created_at": "2026-07-13T03:02:00.007094+00:00",
+  "created_at": "2026-07-13T03:15:40.030605+00:00",
   "input": "D:\\code\\A2UI\\vlm\\aesthetic-v4-vlm-judge-package-20260624\\input\\test_60",
-  "out": "D:\\code\\A2UI\\vlm\\aesthetic-v4-vlm-judge-package-20260624\\runs\\case-600-long-doubao-20\\manifest.jsonl",
+  "out": "D:\\code\\A2UI\\vlm\\aesthetic-v4-vlm-judge-package-20260624\\runs\\case-600-long-doubao-60\\manifest.jsonl",
   "profile": "aesthetic-v4",
   "records": 60
 }

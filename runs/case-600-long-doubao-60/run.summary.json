@@ -1,0 +1,15 @@
+{
+  "backend": "model",
+  "case_image_name": "card.dsl.png",
+  "csv": "D:\\code\\A2UI\\vlm\\aesthetic-v4-vlm-judge-package-20260624\\runs\\case-600-long-doubao-60\\scores.csv",
+  "finished_at": "2026-07-13T03:38:33.707969+00:00",
+  "input": "D:\\code\\A2UI\\vlm\\aesthetic-v4-vlm-judge-package-20260624\\input\\test_60",
+  "manifest": "D:\\code\\A2UI\\vlm\\aesthetic-v4-vlm-judge-package-20260624\\runs\\case-600-long-doubao-60\\manifest.jsonl",
+  "model": "doubao-seed-2-1-pro-260628",
+  "model_provider": "doubao",
+  "profile": "aesthetic-v4",
+  "records": 60,
+  "report": "D:\\code\\A2UI\\vlm\\aesthetic-v4-vlm-judge-package-20260624\\runs\\case-600-long-doubao-60\\report.html",
+  "run_dir": "D:\\code\\A2UI\\vlm\\aesthetic-v4-vlm-judge-package-20260624\\runs\\case-600-long-doubao-60",
+  "scores": "D:\\code\\A2UI\\vlm\\aesthetic-v4-vlm-judge-package-20260624\\runs\\case-600-long-doubao-60\\scores.jsonl"
+}
